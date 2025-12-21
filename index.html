@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +38,11 @@ a:hover { color: var(--primary-hover) }
 .vibe-nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.07);position:sticky;top:0;z-index:2000;padding:1rem 0}
 .vibe-nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
 .vibe-nav-menu{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0}
-.vibe-nav-menu a{color:#4B5563;font-weight:500}
+.vibe-nav-menu a{color:#4B5563;font-weight:500; cursor: pointer;}
 .vibe-nav-toggle{display:none;background:transparent;border:none;cursor:pointer}
 .icon-bar{display:block;width:24px;height:2px;background-color:#111827;border-radius:2px;margin:5px 0}
 
-/* Logo Styles with New Image */
+/* Logo Styles */
 .logo { display: block; position: relative; width: 315px; height: 60px; text-decoration: none }
 .logo_image {
   display: block;
@@ -83,7 +84,6 @@ a:hover { color: var(--primary-hover) }
 .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; padding: 0.5rem 0; list-style: none; min-width: 240px; margin-top:0.5rem }
 .dropdown:hover .dropdown-menu { display: block }
 .dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--text-color) }
-.dropdown-menu a:hover { background-color: #f1f1f1 }
 
 /* Hero Section */
 .banner_wrapper.vibe-hero { 
@@ -114,26 +114,40 @@ a:hover { color: var(--primary-hover) }
 .vibe-card{border-radius:0.75rem;padding:2rem;background-color:#fff;border:1px solid var(--border-color);transition:transform .2s ease}
 .vibe-card:hover{transform:translateY(-5px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}
 
-/* Form */
+/* Contact */
 .contact-section { background: var(--bg-light); padding: 5rem 0 }
 .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem }
-.vibe-field { position: relative }
 .vibe-field input, .vibe-textarea { width: 100%; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; font-family: inherit; font-size: 1rem }
-.vibe-textarea { min-height: 150px; resize: vertical }
+.vibe-textarea { min-height: 150px; }
 
 /* Footer */
 .vibe-footer { background: #111827; color: #9CA3AF; padding: 4rem 0 2rem }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem }
 .footer_title { color: #fff; margin-bottom: 1.25rem; font-weight: 600 }
 .vibe-footer a { display: block; color: #9CA3AF; margin-bottom: 0.75rem }
-.vibe-footer a:hover { color: #fff }
 
+/* Responsive Fixes */
 @media (max-width: 768px) {
     .vibe-nav-toggle { display: block }
-    .vibe-nav-menu { position: fixed; left: -100%; top: 0; height: 100vh; width: 280px; background: #fff; flex-direction: column; padding: 6rem 2rem; transition: left .3s ease; z-index: 2001 }
+    .vibe-nav-menu { position: fixed; left: -100%; top: 0; height: 100vh; width: 280px; background: #fff; flex-direction: column; padding: 6rem 2rem; transition: left .3s ease; z-index: 2001; box-shadow: 4px 0 10px rgba(0,0,0,0.1); }
     .vibe-nav-menu.is-open { left: 0 }
-    .service-container { flex-direction: column; text-align: center }
+    
+    /* FIX FOR MOBILE LAYOUT: Force vertical stack and center content */
+    .service-container, .service-container.reverse { 
+        flex-direction: column !important; 
+        text-align: center; 
+        gap: 2rem; 
+    }
+    .service-image, .service-text { width: 100%; flex: none; }
+    /* Ensure image comes first on mobile even if reversed on desktop */
+    .service-container.reverse { flex-direction: column !important; }
+
     .banner_wrapper.vibe-hero h1 { font-size: 2.25rem }
+    
+    .logo { width: 260px; }
+    .logo_text { font-size: 18px; left: 55px; }
+    .logo_sub_text { font-size: 11px; left: 55px; top: 28px; }
+    .logo_image { width: 45px; height: 45px; }
 }
 </style>
 </head>
@@ -169,7 +183,7 @@ a:hover { color: var(--primary-hover) }
   </div>
 </nav>
 
-<!-- HOME PAGE CONTENT -->
+<!-- HOME -->
 <div id="home-content">
     <section class="vibe-hero banner_wrapper">
         <div class="vibe-container">
@@ -180,11 +194,10 @@ a:hover { color: var(--primary-hover) }
     </section>
 
     <main id="main">
-        <!-- Organ Donation Section -->
         <section class="service-section">
             <div class="vibe-container service-container">
                 <div class="service-image">
-                    <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compassionate healthcare professional support">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Organ Donation Support">
                 </div>
                 <div class="service-text">
                     <h2>Organ Donation</h2>
@@ -194,11 +207,11 @@ a:hover { color: var(--primary-hover) }
             </div>
         </section>
 
-        <!-- Advanced Care Planning Section -->
+        <!-- ACP SECTION (FIXED) -->
         <section class="service-section">
             <div class="vibe-container service-container reverse">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Consultation regarding medical care and planning">
+                    <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Care Planning Consultation">
                 </div>
                 <div class="service-text">
                     <h2>Advance Care Planning</h2>
@@ -208,11 +221,10 @@ a:hover { color: var(--primary-hover) }
             </div>
         </section>
 
-        <!-- Estate Planning Section -->
         <section class="service-section">
             <div class="vibe-container service-container">
                 <div class="service-image">
-                    <img src="https://plus.unsplash.com/premium_photo-1661407696331-6ab41ffbe05a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diverse hands reviewing legal and estate documents">
+                    <img src="https://plus.unsplash.com/premium_photo-1661407696331-6ab41ffbe05a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Estate Planning">
                 </div>
                 <div class="service-text">
                     <h2>Estate Planning</h2>
@@ -226,90 +238,57 @@ a:hover { color: var(--primary-hover) }
     <section id="enquiry_wrapper" class="contact-section">
         <div class="vibe-container">
             <h2 class="section-title">Contact Us</h2>
-            <form id="enq" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); this.reset();">
-                <div class="vibe-field">
-                    <input type="text" placeholder="Full Name" required>
-                </div>
-                <div class="vibe-field">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <textarea class="vibe-textarea" placeholder="How can we help you?"></textarea>
-                <button type="submit" class="vibe-btn vibe-btn-primary">Send Message</button>
+            <form id="enq" class="contact-form">
+                <input type="text" placeholder="Full Name" required style="width:100%; padding:1rem; border:1px solid #ddd; border-radius:8px; margin-bottom:1rem;">
+                <input type="email" placeholder="Email Address" required style="width:100%; padding:1rem; border:1px solid #ddd; border-radius:8px; margin-bottom:1rem;">
+                <textarea placeholder="Message" style="width:100%; padding:1rem; border:1px solid #ddd; border-radius:8px; min-height:120px; margin-bottom:1rem;"></textarea>
+                <button type="submit" class="vibe-btn vibe-btn-primary">Submit</button>
             </form>
         </div>
     </section>
 </div>
 
-<!-- ABOUT US PAGE -->
+<!-- ABOUT US -->
 <section id="about-us-page" class="service-section" style="display: none;">
     <div class="vibe-container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-            <h1 class="section-title" style="margin:0;">About Us</h1>
-            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
+            <h1 style="margin:0;">About Us</h1>
+            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
-        <div class="service-container" style="margin-bottom: 3rem;">
+        <div class="service-container">
             <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop" alt="Inclusive community team">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop" alt="Team Work">
             </div>
             <div class="service-text">
-                <p><b>Angels Outreach Community Interest Company</b> is a community-led social enterprise, created by the community and run for the community. We exist to ensure that everyone, regardless of background, culture, faith, or immigration status has access to the knowledge, tools, and support needed to plan for the future with dignity and confidence.</p>
-                <p>Our work sits at the intersection of estate planning, advance care planning, and health equity. We bring these elements together through culturally competent, trust-based engagement, particularly for migrant, diaspora, and marginalised communities.</p>
+                <p><b>Angels Outreach CIC</b> is a community-led social enterprise, created for the community. We ensure that everyone, regardless of background, culture, or faith, has access to the knowledge and tools needed to plan for the future with dignity.</p>
             </div>
         </div>
-
-        <div style="line-height: 1.8;">
-            <h2 style="color: var(--primary-color);">Why We Exist</h2>
-            <p>Too many families experience unnecessary distress, conflict, and financial hardship because planning conversations never happened, or happened too late. Within Black, migrant, and disadvantaged communities, barriers such as cultural taboos, lack of access to trusted information, language differences, and cross-border legal complexity often prevent people from preparing adequately.</p>
-            <p>We exist to remove those barriers. We empower families to decide how they wish to be cared for, how assets should be managed, and how wishes can be respected across different legal systems.</p>
-            
-            <h2 style="color: var(--primary-color);">What We Do</h2>
-            <ul>
-                <li><b>Estate Planning Education:</b> Awareness about wills and cross-border legacy planning (UK, Africa, Asia, and Caribbean).</li>
-                <li><b>Advance Care Planning (ACP):</b> Documenting wishes for care and treatment during serious illness.</li>
-                <li><b>Community Engagement:</b> Partnerships with community groups, faith organisations, and charities.</li>
-                <li><b>Health Equity:</b> Support for marginalised families to build intergenerational resilience.</li>
-            </ul>
-
-            <h2 style="color: var(--primary-color);">Our Partners</h2>
-            <p>We collaborate with Sue Ryder, Utulivu, Project Salama, ACRE (Action for Communities in Rural England), and more.</p>
+        <div style="margin-top:2rem;">
+            <h2>Why We Exist</h2>
+            <p>Too many families experience distress because planning conversations happened too late. We remove barriers such as cultural taboos and lack of access to information to ensure families are empowered to decide their own future care and legacy.</p>
         </div>
     </div>
 </section>
 
-<!-- OUR MISSION PAGE -->
+<!-- MISSION -->
 <section id="mission-page" class="service-section" style="display: none;">
     <div class="vibe-container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-            <h1 class="section-title" style="margin:0;">Our Mission</h1>
-            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
+            <h1 style="margin:0;">Our Mission</h1>
+            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
-        
-        <div class="service-container reverse" style="margin-bottom: 3rem;">
+        <div class="service-container reverse">
             <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" alt="Supporting diverse families">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" alt="Mission">
             </div>
             <div class="service-text">
-                <h2>The Mission</h2>
-                <p>To empower marginalised and migrant communities to plan for the future with dignity, clarity, and confidence. We increase access to advance care planning, estate planning, and cross-border legacy education, ensuring generational security.</p>
-            </div>
-        </div>
-
-        <div>
-            <h2 style="color: var(--primary-color);">Our Vision</h2>
-            <p>A society where no family is left vulnerable because planning conversations never happened. We envision communities where cultural background is never a barrier to planning ahead and care wishes are respected across all health systems.</p>
-
-            <h2 style="color: var(--primary-color); text-align: center; margin-top: 3rem;">Our Values</h2>
-            <div class="vibe-card-grid">
-                <article class="vibe-card"><h4>Community-Led</h4><p>Shaped by lived experience and guided by the voices of those we serve.</p></article>
-                <article class="vibe-card"><h4>Equity & Inclusion</h4><p>Actively challenging inequalities in access to service and information.</p></article>
-                <article class="vibe-card"><h4>Dignity & Compassion</h4><p>Approaching sensitive conversations with empathy and respect.</p></article>
-                <article class="vibe-card"><h4>Prevention over Crisis</h4><p>Early engagement to avoid unnecessary distress and harm before it arises.</p></article>
+                <p>To empower marginalised and migrant communities to plan for the future with dignity and clarity. We increase access to legacy education to protect family wellbeing across borders.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SERVICE DETAIL PAGES (REUSING IMAGES) -->
+<!-- SERVICE DETAILS -->
 <section id="organ-donation-page" class="service-section" style="display: none;">
     <div class="vibe-container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
@@ -317,7 +296,7 @@ a:hover { color: var(--primary-hover) }
             <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
         <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop" alt="Organ Donation" style="width:100%; border-radius:12px; margin-bottom:2rem;">
-        <p>In May 2020, the new opt-out organ donation law was passed in England. This groundbreaking change empowers individuals to make an active choice, fostering a culture of awareness. Become part of a movement that values informed decision-making.</p>
+        <p>In May 2020, the new opt-out organ donation law was passed in England. We help educate people about their choices regarding organ donation.</p>
     </div>
 </section>
 
@@ -328,7 +307,7 @@ a:hover { color: var(--primary-hover) }
             <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
         <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop" alt="Care Planning" style="width:100%; border-radius:12px; margin-bottom:2rem;">
-        <p>Advance Statements and Lasting Power of Attorney (LPA) ensure that your wishes are honored even if you cannot speak for yourself. We help you preserve autonomy and relieve the burden on your loved ones.</p>
+        <p>Ensuring your healthcare decisions are documented and shared through Advance Statements and Lasting Power of Attorney.</p>
     </div>
 </section>
 
@@ -339,14 +318,14 @@ a:hover { color: var(--primary-hover) }
             <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
         <img src="https://plus.unsplash.com/premium_photo-1661407696331-6ab41ffbe05a?q=80&w=1170&auto=format&fit=crop" alt="Estate Planning" style="width:100%; border-radius:12px; margin-bottom:2rem;">
-        <p>Manage your affairs during your lifetime and ensure a smooth transition of assets. We cover Wills, Trusts, Beneficiary Designations, and cross-border gift planning.</p>
+        <p>Managing assets, Wills, and distribution to ensure your legacy is protected for your loved ones.</p>
     </div>
 </section>
 
 <section id="full-blog-page" class="service-section" style="display: none;">
     <div class="vibe-container">
-        <h1>Blog</h1>
-        <p>Blog updates coming soon. Please check back for more information on community outreach and healthcare planning.</p>
+        <h1>Our Blog</h1>
+        <p>Updates and stories from our community work coming soon.</p>
         <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
     </div>
 </section>
@@ -365,19 +344,13 @@ a:hover { color: var(--primary-hover) }
                 <a href="#" onclick="showPage('mission-page')">Our Mission</a>
             </div>
             <div class="footer_section">
-                <div class="footer_title">Services</div>
-                <a href="#" onclick="showPage('organ-donation-page')">Organ Donation</a>
-                <a href="#" onclick="showPage('advance-care-planning-page')">ACP</a>
-                <a href="#" onclick="showPage('estate-planning-page')">Estate Planning</a>
-            </div>
-            <div class="footer_section">
                 <div class="footer_title">Contact</div>
                 <p>angelsoutreachcic@outlook.com</p>
                 <p>07956169423</p>
             </div>
         </div>
         <div style="text-align: center; border-top: 1px solid #374151; padding-top: 2rem;">
-            ©2025 Angels Outreach CIC. All Rights Reserved.
+            ©2025 Angels Outreach CIC.
         </div>
     </div>
 </footer>
