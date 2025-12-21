@@ -6,17 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="GigaGrowth">
-    <meta name="keywords" lang="en" content="business">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-5">
     <meta name="description" content="Angels Outreach Community Interest Company."/>
-    <link rel="icon" type="image/png" href="https://angelsoutreachcic.org.uk/dev/images/favicon.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="https://angelsoutreachcic.org.uk/dev/images/favicon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="https://angelsoutreachcic.org.uk/dev/images/favicon.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://1stradiant.github.io/Ao/1766319897858.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&family=Barlow:wght@500&family=Kumbh+Sans:wght@400&display=swap" rel="stylesheet">
-    <style>/* Global Styles */
+    <style>
+/* Global Styles */
 :root {
     --primary-color: #800020;
     --primary-hover: #600018;
@@ -26,58 +23,37 @@
     --white: #fff;
     --border-color: #e5e7eb}
 
-*, *::before, *::after {
-    box-sizing: border-box}
-
-html {
-    scroll-behavior: smooth}
-
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.6;
-    background-color: var(--white)}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--heading-color);
-    font-weight: 700}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.2s ease}
-a:hover {
-    color: var(--primary-hover)}
+*, *::before, *::after { box-sizing: border-box }
+html { scroll-behavior: smooth }
+body { font-family: 'Inter', sans-serif; color: var(--text-color); margin: 0; line-height: 1.6; background-color: var(--white) }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; color: var(--heading-color); font-weight: 700 }
+a { text-decoration: none; color: var(--primary-color); transition: color 0.2s ease }
+a:hover { color: var(--primary-hover) }
 
 .vibe-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;width:100%}
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem }
 
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem}
+/* Navbar */
+.vibe-nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.07);position:sticky;top:0;z-index:2000;padding:1rem 0}
+.vibe-nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
+.vibe-nav-menu{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0}
+.vibe-nav-menu a{color:#4B5563;font-weight:500}
+.vibe-nav-toggle{display:none;background:transparent;border:none;cursor:pointer}
+.icon-bar{display:block;width:24px;height:2px;background-color:#111827;border-radius:2px;margin:5px 0}
 
-/* --- VibeUI Components CSS --- */
-
-/* Skip Link */
-.vibe-skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}.vibe-skip:focus{position:fixed;left:1rem;top:1rem;background:#fff;color:var(--primary-color);padding:.5rem 1rem;border-radius:6px;z-index:9999;box-shadow:0 4px 6px rgba(0,0,0,.1)}
-
-/* Responsive Navbar */
-.vibe-nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.07),0 2px 4px -2px rgba(0,0,0,.04);position:sticky;top:0;z-index:2000;padding:1rem 0}.vibe-nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}.vibe-nav-menu{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0}.vibe-nav-menu a{color:#4B5563;text-decoration:none;font-weight:500;transition:color .2s ease}.vibe-nav-menu a:hover{color:var(--primary-color)}.vibe-nav-toggle{display:none;background:transparent;border:none;cursor:pointer}.icon-bar{display:block;width:24px;height:2px;background-color:#111827;border-radius:2px;transition:all .3s ease-in-out}.icon-bar+.icon-bar{margin-top:5px}
-
-.logo {
-  display: block;
-  position: relative;
-  width: 315px;
-  height: 60px;
-  text-decoration: none}
+/* Logo Styles with New Image */
+.logo { display: block; position: relative; width: 315px; height: 60px; text-decoration: none }
 .logo_image {
   display: block;
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url('https://angelsoutreachcic.org.uk/images/logo.png');
+  width: 55px;
+  height: 55px;
+  background-image: url('https://1stradiant.github.io/Ao/1766319897858.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center}
+  background-position: center;
+  top: 2.5px
+}
 .logo_text {
   display: block;
   position: absolute;
@@ -102,393 +78,80 @@ a:hover {
   font-weight: 400;
   color: #800020}
 
-.vibe-nav-menu .dropdown { position: relative}
-.vibe-nav-menu .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; padding: 0.5rem 0; list-style: none; min-width: 240px; z-index: 2001; margin-top:0.5rem}
-.vibe-nav-menu .dropdown:hover .dropdown-menu { display: block}
-.vibe-nav-menu .dropdown-menu li { width: 100%}
-.vibe-nav-menu .dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--text-color)}
-.vibe-nav-menu .dropdown-menu a:hover { background-color: #f1f1f1; color: var(--primary-color)}
-
-/* Button System */
-.vibe-btn{padding:.6rem 1.25rem;border-radius:8px;border:1px solid transparent;cursor:pointer;font-weight:600;font-size:0.9rem;transition:all .2s ease; display:inline-block}.vibe-btn-primary{background:var(--primary-color);color:#fff}.vibe-btn-primary:hover{background:var(--primary-hover);color:#fff}.vibe-btn-outline{background:transparent;border-color:#d1d5db;color:#374151}.vibe-btn-outline:hover{background:#f9fafb;border-color:var(--primary-color);color:var(--primary-color)}
-
-/* Added style for delete button */
-.vibe-btn-danger {
-    background-color: #EF4444;
-    color: #fff;
-}
-.vibe-btn-danger:hover {
-    background-color: #DC2626;
-}
-
-.vibe-nav-menu .vibe-btn { padding: 0.4rem 1rem}
+/* Dropdown */
+.dropdown { position: relative }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; padding: 0.5rem 0; list-style: none; min-width: 240px; margin-top:0.5rem }
+.dropdown:hover .dropdown-menu { display: block }
+.dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--text-color) }
+.dropdown-menu a:hover { background-color: #f1f1f1 }
 
 /* Hero Section */
-.vibe-hero{padding:5rem 0;text-align:center}
-.vibe-hero h1{font-size:3rem;margin:0 0 .5rem}.vibe-hero p{font-size:1.25rem;color:#6B7280;margin-bottom:2rem}
 .banner_wrapper.vibe-hero { 
-    background: url(https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop) no-repeat center/cover;
-    position: relative; 
-    color: var(--white); 
-    padding: 7rem 0}
-.banner_wrapper.vibe-hero h1, .banner_wrapper.vibe-hero p { color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5)}
-.banner_wrapper.vibe-hero::before { 
-    content: ''; 
-    position: absolute; 
-    inset: 0; 
-    background-color: rgba(128, 0, 32, 0.65); 
-    z-index: 1}
-.banner_wrapper.vibe-hero .vibe-container { position: relative; z-index: 2}
+    background: url(https://images.unsplash.com/photo-1630068846062-3ffe78aa5049?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center/cover;
+    position: relative; color: var(--white); padding: 8rem 0; text-align: center}
+.banner_wrapper.vibe-hero::before { content: ''; position: absolute; inset: 0; background-color: rgba(128, 0, 32, 0.55); z-index: 1 }
+.banner_wrapper.vibe-hero .vibe-container { position: relative; z-index: 2 }
+.banner_wrapper.vibe-hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5) }
+.banner_wrapper.vibe-hero p { font-size: 1.25rem; color: #fff; max-width: 800px; margin: 0 auto 2rem }
 
 /* Service Sections */
-.service-section { padding: 5rem 0}
-.service-section:nth-child(even) { background-color: var(--bg-light)}
-.service-container { display: flex; align-items: center; gap: 4rem}
-.service-container.reverse { flex-direction: row-reverse}
-.service-image, .service-text { flex: 1}
-.service-image img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1); object-fit: cover; aspect-ratio: 16/10;}
-.service-text h2 { font-size: 2.25rem; margin-top: 0}
-.service-text p { font-size: 1.1rem; color: var(--text-color); margin-bottom: 2rem}
+.service-section { padding: 5rem 0 }
+.service-section:nth-child(even) { background-color: var(--bg-light) }
+.service-container { display: flex; align-items: center; gap: 4rem }
+.service-container.reverse { flex-direction: row-reverse }
+.service-image, .service-text { flex: 1 }
+.service-image img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1); object-fit: cover; aspect-ratio: 4/3; }
 
-/* Why Us Section / Card Grid */
-.why-us-section { padding: 5rem 0; background-color: var(--white)}
+/* Buttons */
+.vibe-btn { padding: .75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all .2s ease; display: inline-block; border: 1px solid transparent }
+.vibe-btn-primary { background: var(--primary-color); color: #fff }
+.vibe-btn-primary:hover { background: var(--primary-hover) }
+.vibe-btn-outline { background: transparent; border-color: #d1d5db; color: #374151 }
+.vibe-btn-outline:hover { background: #f9fafb; border-color: var(--primary-color); color: var(--primary-color) }
+
+/* Card Grid */
 .vibe-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.vibe-card{border-radius:0.75rem;overflow:hidden;background-color:#fff;border:1px solid var(--border-color);box-shadow:0 4px 6px -1px rgba(0,0,0,.05);transition:transform .2s ease,box-shadow .2s ease}
-.vibe-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}
-.vibe-card-media{width:100%;height:180px;display:block;object-fit:cover}
-.vibe-card-body{padding:1.5rem}
-.vibe-card-body h4{margin:0 0 .5rem;font-size:1.25rem;color:var(--heading-color)}
-.vibe-card-body p{margin:0 0 1.25rem;color:var(--text-color);line-height:1.6}
-.vibe-card-btn{display:inline-block;padding:.5rem 1rem;border-radius:999px;background-color:#F3F4F6;color:#1F2937;text-decoration:none;font-weight:500;font-size:.875rem;transition:background-color .2s ease, color .2s ease; cursor:pointer; border: none}
-.vibe-card-btn:hover{background-color:var(--primary-color);color:#fff}
+.vibe-card{border-radius:0.75rem;padding:2rem;background-color:#fff;border:1px solid var(--border-color);transition:transform .2s ease}
+.vibe-card:hover{transform:translateY(-5px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}
 
-/* Modal Dialog */
-.vibe-modal{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s ease}.vibe-modal.is-open{opacity:1;visibility:visible}.vibe-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}.vibe-modal-panel{position:relative;max-width:650px;width:90%;padding:2rem;background:#fff;border-radius:.75rem;box-shadow:0 10px 15px -3px rgba(0,0,0,.1);transform:scale(.95);transition:transform .3s ease; max-height: 90vh; overflow-y: auto}.vibe-modal.is-open .vibe-modal-panel{transform:scale(1)}.vibe-modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:none;cursor:pointer; font-size: 1.2rem; color: #666}
-
-/* Confirmation Dialog (reusing modal styles) */
-.vibe-confirm{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.4);z-index:3500}.vibe-confirm.is-open{display:flex}.vibe-confirm .panel{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 4px 6px rgba(0,0,0,.1); text-align: center;}
-.vibe-confirm .panel div { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;}
-
-/* Contact Section */
-.contact-section { padding: 5rem 0; background: var(--bg-light)}
-.contact-form { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem}
-.contact-form button { align-self: flex-start}
-
-/* Input with Floating Label */
-.vibe-field{position:relative;display:block}.vibe-field input{width:100%;padding:.85rem;border:1px solid #d1d5db;border-radius:8px;transition:border-color .2s ease; background-color:var(--white); font-size:1rem}.vibe-field input:focus{border-color:var(--primary-color);outline:none}.vibe-field-label{position:absolute;left:12px;top:14px;transform-origin:left top;transition:all .2s ease;color:#6B7280;background:#fff;padding:0 .25rem;pointer-events:none}.vibe-field input:focus + .vibe-field-label,.vibe-field input:not(:placeholder-shown) + .vibe-field-label{transform:translateY(-50%) scale(.85);top:0}
-
-/* Textarea Autosize */
-.vibe-textarea{width:100%;padding:.85rem;border:1px solid #d1d5db;border-radius:8px;resize:none;min-height:96px;transition:border-color .2s ease; font-family:'Inter', sans-serif; font-size:1rem}.vibe-textarea:focus{border-color:var(--primary-color);outline:none}
-
-/* Rich Text Editor */
-.vibe-editor{min-height:200px;padding:1rem;border:1px solid #d1d5db;border-radius:8px;background:#fff;transition:border-color .2s ease; margin-top: 1rem}.vibe-editor:focus{outline:none;border-color:var(--primary-color)}
+/* Form */
+.contact-section { background: var(--bg-light); padding: 5rem 0 }
+.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem }
+.vibe-field { position: relative }
+.vibe-field input, .vibe-textarea { width: 100%; padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; font-family: inherit; font-size: 1rem }
+.vibe-textarea { min-height: 150px; resize: vertical }
 
 /* Footer */
-.vibe-footer{padding:4rem 0 0;background:#111827;color:#9CA3AF}
-.vibe-footer .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding-bottom: 3rem}
-.vibe-footer .footer_section .footer_logo { font-family:'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem}
-.vibe-footer .footer_section .footer_title { font-family:'Poppins', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 1rem}
-.vibe-footer .footer_section a { display: block; color:#9CA3AF; text-decoration:none; margin-bottom: 0.5rem}
-.vibe-footer .footer_section a:hover{color:var(--white)}
-.vibe-footer .copyright_wrapper { padding: 1.5rem 0; margin-top: 2rem; border-top: 1px solid #374151; text-align: center; font-size: 0.9rem}
-.vibe-footer .copyright_container a { color: var(--white); text-decoration: underline}
-
-/* Login State Visibility */
-.show-if-logged-in { display: none; }
-.hide-if-logged-in { display: block; }
-body.logged-in .show-if-logged-in { display: block; }
-body.logged-in .hide-if-logged-in { display: none; }
-
-.create-post-container { text-align: right; margin-bottom: 2rem}
-
-/* Organ Donation Page Styles */
-.page_wrapper{
-display:block;
-position:relative;
-width:100%;
-height:auto;
-}
-
-.page_container{
-display:flex;
-position:relative;
-width:100%;
-height:auto;
-margin:0 auto;
-gap: 3rem;
-flex-wrap: wrap;
-}
-
-.page_section{
- flex: 2;
- min-width: 300px;
-}
-.page_sidebar{
- flex: 1;
- min-width: 280px;
-}
-.page_section h1 {
-  font-size: 2.5rem; margin-bottom: 1.5rem; color: #800020;
-}
-.page_image img {
-  max-width: 100%; height: auto; border-radius: 12px;
-}
-.para {
-  line-height: 1.7; margin-top: 1rem;
-}
-.para ul { padding-left: 20px; margin-top: 1rem;}
-.para li { margin-bottom: 0.75rem;}
-
-.enquiry_wrapper{
-display:block;
-position:relative;
-width:100%;
-height:auto;
-background-color:#FFFFFF;
-margin:0 auto;
-}
-
-.enquiry_container{
-display:block;
-position:relative;
-width:100%;
-height:auto;
-margin:0 auto;
-}
-
-.enquiry_form_wrapper{
-display:block;
-position:relative;
-width:100%;
-min-height:519px;
-height:auto;
-margin:0 auto;
-}
-
-.enquiry_form_container{
-display:block;
-position:absolute;
-width:100%;
-height:auto;
-background-color:#FFFFFF;
-border:1px solid #DFDFDF;
-box-shadow: 0 2px 2px #E2E2E2;
-border-radius:5px;
-}
-
-.enquiry_form_container h1{
-display:block;
-position:relative;
-left:50px;
-top:5px;
-width:calc(100% - 100px);
-height:20px;
-line-height:20px;
-height:auto;
-font-family:arial, helvetica, sans-serif;
-font-size:18px;
-font-weight:400;
-color:#006BFF;
-margin:0px;
-}
-
-#enq_organ_donation, #enq_estate_planning, #enq_acp {
-display:block;
-position:relative;
-left:40px;
-top:10px;
-width:calc(100% - 80px);
-height:519px;
-}
-
-.enquiry_input{
-display:block;
-position:absolute;
-width:calc(100% - 12px);
-height:38px;
-font-family:arial,helvetica,sans-serif;
-font-size:14px;
-color:#383838;
-padding:0px;
-padding-left:10px;
-background-color:#FAFAFA;
-border:1px solid #DFDFDF;
-border-radius:3px;
-}
-
-.enquiry_textarea{
-display:block;
-position:absolute;
-width:calc(100% - 12px);
-height:140px;
-font-family:arial,helvetica,sans-serif;
-font-size:14px;
-color:#383838;
-padding:0px;
-padding-top:9px;
-padding-left:10px;
-background-color:#FAFAFA;
-border:1px solid #DFDFDF;
-border-radius:3px;
-resize: none;
-}
-
-.labels{
-display:block;
-position:absolute;
-width:290px;
-height:30px;
-padding-top:10px;
-line-height:20px;
-font-family:'Kumbh Sans',sans-serif;
-font-size:16px;
-font-weight:500;
-color:#4D4D4D;
-}
-
-.error_labels{
-display:block;
-position:absolute;
-width:290px;
-height:30px;
-padding-top:10px;
-line-height:20px;
-font-family:'Kumbh Sans',sans-serif;
-font-weight:500;
-font-size:16px;
-}
-
-#enq_organ_donation #fullname_label_od, #enq_estate_planning #fullname_label_ep, #enq_acp #fullname_label_acp { top:0px; }
-#enq_organ_donation #fullname_od, #enq_estate_planning #fullname_ep, #enq_acp #fullname_acp { top:30px; }
-#enq_organ_donation #email_label_od, #enq_estate_planning #email_label_ep, #enq_acp #email_label_acp { top:70px; }
-#enq_organ_donation #email_od, #enq_estate_planning #email_ep, #enq_acp #email_acp { top:100px; }
-#enq_organ_donation #phone_label_od, #enq_estate_planning #phone_label_ep, #enq_acp #phone_label_acp { left:0px; top:140px; }
-#enq_organ_donation #phone_od, #enq_estate_planning #phone_ep, #enq_acp #phone_acp { left:0px; top:170px; }
-#enq_organ_donation #message_label_od, #enq_estate_planning #message_label_ep, #enq_acp #message_label_acp { left:0px; top:210px; }
-#enq_organ_donation #message_od, #enq_estate_planning #message_ep, #enq_acp #message_acp { left:0px; top:240px; }
-
-.submit_btn{
-display:block;
-position:absolute;
-top:423px;
-left:0px;
-width:calc(100% + 2px);
-height:44px;
-line-height:46px;
-text-align:center;
-vertical-align:middle;
-text-decoration:none;
-color:#FFFFFF;
-font-family:'Poppins',sans-serif;
-font-size:16px;
-font-weight:600;
-border:0px;
-background-color:#F68522;
-border-bottom:2px solid #CC5D04;
-border-radius:4px;
-cursor:pointer;
-}
-
-.submit_btn:hover{
-color:#FFFFFF;
-background-color:#CC5D04;
-}
-
-/* Admin Page Styles */
-.admin-page-container { padding-top: 3rem; padding-bottom: 3rem; }
-.admin-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
-.admin-controls select { padding: .6rem 1rem; border-radius: 8px; border: 1px solid #d1d5db; background-color: white; font-size: 0.9rem; }
-.admin-table-wrapper { overflow-x: auto; background: white; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,.05);}
-.admin-table { width: 100%; border-collapse: collapse; text-align: left; }
-.admin-table th, .admin-table td { padding: .75rem 1rem; border-bottom: 1px solid var(--border-color); }
-.admin-table tr:last-child td { border-bottom: none; }
-.admin-table th { font-weight: 600; color: var(--heading-color); background-color: var(--bg-light);}
-.admin-table tbody tr:nth-child(even) { background: #fcfcfd; }
-.admin-table td { max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.9rem; }
-.admin-table .actions { white-space: nowrap; width: 1%; }
-.admin-table .actions .vibe-btn { margin-right: 0.5rem; padding: 0.3rem 0.6rem; font-size: 0.8rem; }
-#admin-form-fields .vibe-field { margin-bottom: 1rem; }
-#admin-form-fields textarea { width: 100%; box-sizing: border-box; min-height: 120px; padding: .85rem; border: 1px solid #d1d5db; border-radius: 8px; resize: vertical; font-family:'Inter', sans-serif; font-size:1rem;}
-
+.vibe-footer { background: #111827; color: #9CA3AF; padding: 4rem 0 2rem }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem }
+.footer_title { color: #fff; margin-bottom: 1.25rem; font-weight: 600 }
+.vibe-footer a { display: block; color: #9CA3AF; margin-bottom: 0.75rem }
+.vibe-footer a:hover { color: #fff }
 
 @media (max-width: 768px) {
-    /* Navbar */
-    .vibe-nav-toggle { display: block}
-    .vibe-nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        height: 100vh;
-        width: 280px;
-        background: #fff;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 6rem 2rem;
-        gap: 1.5rem;
-        transition: left .3s ease;
-        box-shadow: 0 10px 15px -3px rgba(0,0,0,.1)}
-    .vibe-nav-menu.is-open { left: 0}
-    .vibe-nav-menu .dropdown-menu {
-        position: static;
-        display: block;
-        box-shadow: none;
-        background: transparent;
-        padding: 0.5rem 0 0 1rem;
-        border: none;
-        min-width: unset;
-        margin-top: 0}
-    .vibe-nav-menu .dropdown > a { font-weight: bold}
-    .vibe-nav-menu .dropdown-menu a {
-        padding: 0.5rem 1rem;
-        font-weight: 400}
-    
-    /* Responsive Logo */
-    .logo {
-        width: 240px;
-        height: 50px}
-    .logo_image {
-        width: 50px;
-        height: 50px}
-    .logo_text {
-        left: 55px;
-        width: 185px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 18px}
-    .logo_sub_text {
-        left: 55px;
-        top: 28px;
-        width: 185px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 11px}
-
-    /* Hero */
-    .vibe-hero h1 { font-size: 2.25rem}
-    .vibe-hero p { font-size: 1.1rem}
-
-    /* Services */
-    .service-container, 
-    .service-container.reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem}
-}</style>
+    .vibe-nav-toggle { display: block }
+    .vibe-nav-menu { position: fixed; left: -100%; top: 0; height: 100vh; width: 280px; background: #fff; flex-direction: column; padding: 6rem 2rem; transition: left .3s ease; z-index: 2001 }
+    .vibe-nav-menu.is-open { left: 0 }
+    .service-container { flex-direction: column; text-align: center }
+    .banner_wrapper.vibe-hero h1 { font-size: 2.25rem }
+}
+</style>
 </head>
 <body>
-<a data-vibe-node-id="skip-to-content-link" href="#main" class="vibe-skip">Skip to content</a>
-<nav data-vibe-node-id="main-navigation" class="vibe-nav" id="main-navigation"><div data-vibe-node-id="nav-container" class="vibe-container vibe-nav-inner">
+
+<nav class="vibe-nav">
+  <div class="vibe-container vibe-nav-inner">
     <a class="logo" href="#" onclick="showPage('home-content')">
         <div class="logo_image"></div>
         <div class="logo_text">ANGELS OUTREACH</div>
         <div class="logo_sub_text">COMMUNITY INTEREST COMPANY</div>
     </a>
-    <button class="vibe-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="vibe-nav-toggle" id="nav-toggle">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <ul class="vibe-nav-menu">
+    <ul class="vibe-nav-menu" id="nav-menu">
       <li><a href="#" onclick="showPage('home-content')">Home</a></li>
       <li><a href="#" onclick="showPage('about-us-page')">About Us</a></li>
       <li><a href="#" onclick="showPage('mission-page')">Our Mission</a></li>
@@ -502,22 +165,26 @@ background-color:#CC5D04;
       </li>
       <li><a href="#" onclick="showPage('full-blog-page')">Blog</a></li>
       <li><a href="#enquiry_wrapper">Contact</a></li>
-      <li class="hide-if-logged-in"><button class="vibe-btn vibe-btn-outline" onclick="openModal('loginModal')">Login</button></li>
-       <li class="hide-if-logged-in"><button class="vibe-btn vibe-btn-primary" onclick="openModal('signupModal')">Sign Up</button></li>
-      <li class="show-if-logged-in"><a href="#" onclick="showPage('admin-page')">Admin</a></li>
-      <li class="show-if-logged-in"><button class="vibe-btn vibe-btn-primary" id="logoutBtn">Logout</button></li>
     </ul>
   </div>
 </nav>
-<div data-vibe-node-id="home-content-wrapper" id="home-content"><section data-vibe-node-id="hero-section" class="vibe-hero banner_wrapper" id="hero-section"><div data-vibe-node-id="hero-content-container" class="vibe-container">
+
+<!-- HOME PAGE CONTENT -->
+<div id="home-content">
+    <section class="vibe-hero banner_wrapper">
+        <div class="vibe-container">
             <h1>Power to the People!</h1>
             <p>Sharing healthcare preferences with loved ones and creating estate plans is a valuable gift to those closest to you.</p>
-            <a class="vibe-btn vibe-btn-primary" href="#enquiry_wrapper">Get in touch</a>
+            <a class="vibe-btn vibe-btn-primary" href="#enquiry_wrapper">Get started</a>
         </div>
-</section>
-<main data-vibe-node-id="main-content-area" id="main"><section data-vibe-node-id="organ-donation-service-section" class="service-section" id="organ-donation-service-section"><div data-vibe-node-id="organ-donation-container" class="vibe-container service-container">
+    </section>
+
+    <main id="main">
+        <!-- Organ Donation Section -->
+        <section class="service-section">
+            <div class="vibe-container service-container">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1000&auto=format&fit=crop" alt="Compassionate healthcare supporting diverse patients">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compassionate healthcare professional support">
                 </div>
                 <div class="service-text">
                     <h2>Organ Donation</h2>
@@ -525,10 +192,13 @@ background-color:#CC5D04;
                     <a href="#" onclick="showPage('organ-donation-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
                 </div>
             </div>
-</section>
-<section data-vibe-node-id="advance-care-planning-service-section" class="service-section" id="advance-care-planning-service-section"><div data-vibe-node-id="advance-care-planning-container" class="vibe-container service-container reverse">
+        </section>
+
+        <!-- Advanced Care Planning Section -->
+        <section class="service-section">
+            <div class="vibe-container service-container reverse">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop" alt="A professional woman consulting with an elderly person of a different background">
+                    <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Consultation regarding medical care and planning">
                 </div>
                 <div class="service-text">
                     <h2>Advance Care Planning</h2>
@@ -536,10 +206,13 @@ background-color:#CC5D04;
                     <a href="#" onclick="showPage('advance-care-planning-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
                 </div>
             </div>
-</section>
-<section data-vibe-node-id="estate-planning-service-section" class="service-section" id="estate-planning-service-section"><div data-vibe-node-id="estate-planning-container" class="vibe-container service-container">
+        </section>
+
+        <!-- Estate Planning Section -->
+        <section class="service-section">
+            <div class="vibe-container service-container">
                 <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1581578731522-39c299f18706?q=80&w=1000&auto=format&fit=crop" alt="A diverse family sitting together discussing their future">
+                    <img src="https://plus.unsplash.com/premium_photo-1661407696331-6ab41ffbe05a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diverse hands reviewing legal and estate documents">
                 </div>
                 <div class="service-text">
                     <h2>Estate Planning</h2>
@@ -547,475 +220,184 @@ background-color:#CC5D04;
                     <a href="#" onclick="showPage('estate-planning-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
                 </div>
             </div>
-</section>
-</main>
-<section data-vibe-node-id="why-us-section" class="why-us-section" id="why-us-section"><div data-vibe-node-id="why-us-container" class="vibe-container">
-            <h2 class="section-title">Why Choose Angels Outreach?</h2>
-            <div class="vibe-card-grid">
-                <article class="vibe-card">
-                    <div class="vibe-card-body">
-                        <h4>Community-Centric</h4>
-                        <p>We prioritise the needs of marginalised communities, tailoring our resources to address unique healthcare and estate planning challenges and concerns.</p>
-                    </div>
-                </article>
-                <article class="vibe-card">
-                    <div class="vibe-card-body">
-                        <h4>Inclusivity</h4>
-                        <p>We are committed to reaching every corner of society, ensuring that no one is left behind.</p>
-                    </div>
-                </article>
-                <article class="vibe-card">
-                    <div class="vibe-card-body">
-                        <h4>Education</h4>
-                        <p>We believe in the power of knowledge to transform lives. By providing individuals with the tools and education they need, we empower them to take control of their health and financial future.</p>
-                    </div>
-                </article>
-                <article class="vibe-card">
-                    <div class="vibe-card-body">
-                        <h4>Community Collaboration</h4>
-                        <p>By working hand-hand with local organisations, we maximise our impact and create lasting change.</p>
-                    </div>
-                </article>
-                <article class="vibe-card">
-                    <div class="vibe-card-body">
-                        <h4>Trustworthy</h4>
-                        <p>We are committed to transparency and ethical practices. You can trust us to provide reliable information and support.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-</section>
-<section data-vibe-node-id="blog-section-preview" id="blog-section" class="service-section" style="background-color: var(--bg-light);"><div data-vibe-node-id="blog-section-container" class="vibe-container">
-            <h2 class="section-title">From Our Blog</h2>
-            <div class="vibe-card-grid" id="blogGrid">
-                <!-- Blog posts will be dynamically inserted here -->
-            </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="#" onclick="showPage('full-blog-page')" class="vibe-btn vibe-btn-primary">View All Posts</a>
-            </div>
-        </div>
-</section>
-<section data-vibe-node-id="contact-section" id="enquiry_wrapper" class="contact-section"><div data-vibe-node-id="contact-form-container" class="vibe-container">
+        </section>
+    </main>
+
+    <section id="enquiry_wrapper" class="contact-section">
+        <div class="vibe-container">
             <h2 class="section-title">Contact Us</h2>
-            <form id="enq" method="post" action="https://angelsoutreachcic.org.uk/get_message.php" class="contact-form">
-                <label class="vibe-field">
-                    <input type="text" name="fullname" required="" placeholder=" ">
-                    <span class="vibe-field-label">Full Name</span>
-                </label>
-                <label class="vibe-field">
-                    <input type="email" name="email" required="" placeholder=" ">
-                    <span class="vibe-field-label">Email Address</span>
-                </label>
-                <label class="vibe-field">
-                    <input type="tel" name="phone" required="" placeholder=" ">
-                    <span class="vibe-field-label">Phone</span>
-                </label>
-                <textarea class="vibe-textarea" name="message" rows="4" placeholder="Your message..."></textarea>
-                <button type="submit" class="vibe-btn vibe-btn-primary">Submit</button>
+            <form id="enq" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); this.reset();">
+                <div class="vibe-field">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="vibe-field">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <textarea class="vibe-textarea" placeholder="How can we help you?"></textarea>
+                <button type="submit" class="vibe-btn vibe-btn-primary">Send Message</button>
             </form>
         </div>
-</section>
+    </section>
 </div>
 
-<!-- ABOUT US PAGE CONTENT -->
-<section data-vibe-node-id="about-us-page" id="about-us-page" class="service-section" style="display: none; min-height: 80vh;">
+<!-- ABOUT US PAGE -->
+<section id="about-us-page" class="service-section" style="display: none;">
     <div class="vibe-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-            <h1 class="section-title" style="margin-bottom: 0; text-align: left;">About Us</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 class="section-title" style="margin:0;">About Us</h1>
             <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
         </div>
         <div class="service-container" style="margin-bottom: 3rem;">
             <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop" alt="Diverse group of community leaders collaborating">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop" alt="Inclusive community team">
             </div>
-            <div class="service-text para">
+            <div class="service-text">
                 <p><b>Angels Outreach Community Interest Company</b> is a community-led social enterprise, created by the community and run for the community. We exist to ensure that everyone, regardless of background, culture, faith, or immigration status has access to the knowledge, tools, and support needed to plan for the future with dignity and confidence.</p>
-                <p>Our work sits at the intersection of estate planning, advance care planning, and health equity. While many organisations address individual aspects of end-of-life awareness, Angels Outreach CIC is unique in bringing these elements together through culturally competent, trust-based community engagement, particularly for migrant, diaspora, and marginalised communities.</p>
+                <p>Our work sits at the intersection of estate planning, advance care planning, and health equity. We bring these elements together through culturally competent, trust-based engagement, particularly for migrant, diaspora, and marginalised communities.</p>
             </div>
         </div>
 
-        <div class="para">
-            <h2 style="font-size: 2rem; margin-top: 2rem; color: var(--primary-color);">Why We Exist</h2>
+        <div style="line-height: 1.8;">
+            <h2 style="color: var(--primary-color);">Why We Exist</h2>
             <p>Too many families experience unnecessary distress, conflict, and financial hardship because planning conversations never happened, or happened too late. Within Black, migrant, and disadvantaged communities, barriers such as cultural taboos, lack of access to trusted information, language differences, and cross-border legal complexity often prevent people from preparing adequately.</p>
-            <p>We exist to remove those barriers. Angels Outreach CIC works to ensure that families are empowered to make informed decisions about:</p>
+            <p>We exist to remove those barriers. We empower families to decide how they wish to be cared for, how assets should be managed, and how wishes can be respected across different legal systems.</p>
+            
+            <h2 style="color: var(--primary-color);">What We Do</h2>
             <ul>
-                <li>How they wish to be cared for if they become unwell</li>
-                <li>How their assets and property should be managed and passed on</li>
-                <li>How their wishes can be respected across different legal systems and countries</li>
+                <li><b>Estate Planning Education:</b> Awareness about wills and cross-border legacy planning (UK, Africa, Asia, and Caribbean).</li>
+                <li><b>Advance Care Planning (ACP):</b> Documenting wishes for care and treatment during serious illness.</li>
+                <li><b>Community Engagement:</b> Partnerships with community groups, faith organisations, and charities.</li>
+                <li><b>Health Equity:</b> Support for marginalised families to build intergenerational resilience.</li>
             </ul>
 
-            <h2 style="font-size: 2rem; margin-top: 2rem; color: var(--primary-color);">What We Do</h2>
-            <ul>
-                <li><b>Estate Planning Education:</b> Raising awareness about wills, trusts, and legacy planning, with particular attention to cross-border estates involving the UK and countries in Africa, Asia, and the Caribbean.</li>
-                <li><b>Advance Care Planning (ACP):</b> Helping people understand and document their wishes for care, treatment, and decision-making during serious illness or incapacity.</li>
-                <li><b>Community Engagement & Workshops:</b> Delivering accessible workshops, conversations, and training sessions in partnership with community groups, faith organisations, and charities.</li>
-                <li><b>Health Equity & Inequality Reduction:</b> Addressing the disproportionate impact of poor planning on migrant and marginalised communities.</li>
-            </ul>
-
-            <h2 style="font-size: 2rem; margin-top: 2rem; color: var(--primary-color);">Our Approach</h2>
-            <p>We believe effective support must be:</p>
-            <ul>
-                <li><b>Community-led</b> – shaped by lived experience</li>
-                <li><b>Culturally sensitive</b> – respectful of faith, tradition, and identity</li>
-                <li><b>Accessible</b> – clear, practical, and free from unnecessary jargon</li>
-                <li><b>Preventative</b> – helping families avoid crisis before it happens</li>
-            </ul>
-            <p>Our work is rooted in trust, education, and empowerment—not fear or pressure.</p>
-
-            <h2 style="font-size: 2rem; margin-top: 2rem; color: var(--primary-color);">Who We Work With</h2>
-            <p>Angels Outreach CIC collaborates with a wide range of partners, including Sue Ryder, Utulivu, Project Salama, ACRE (Action for Communities in Rural England), and others committed to reducing inequality and improving community wellbeing.</p>
+            <h2 style="color: var(--primary-color);">Our Partners</h2>
+            <p>We collaborate with Sue Ryder, Utulivu, Project Salama, ACRE (Action for Communities in Rural England), and more.</p>
         </div>
     </div>
 </section>
 
-<!-- OUR MISSION PAGE CONTENT -->
-<section data-vibe-node-id="mission-page" id="mission-page" class="service-section" style="display: none; min-height: 80vh;">
+<!-- OUR MISSION PAGE -->
+<section id="mission-page" class="service-section" style="display: none;">
     <div class="vibe-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-            <h1 class="section-title" style="margin-bottom: 0; text-align: left;">Our Mission</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 class="section-title" style="margin:0;">Our Mission</h1>
             <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
         </div>
         
-        <div class="service-container reverse">
+        <div class="service-container reverse" style="margin-bottom: 3rem;">
             <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" alt="Diverse group of friends and family laughing together">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" alt="Supporting diverse families">
             </div>
-            <div class="service-text para">
+            <div class="service-text">
                 <h2>The Mission</h2>
-                <p>To empower marginalised and migrant communities to plan for the future with dignity, clarity, and confidence. Angels Outreach CIC exists to increase access to advance care planning, estate planning, and cross-border legacy education, ensuring individuals and families are informed, prepared, and supported to make decisions that protect their wellbeing, wishes, and generational security.</p>
+                <p>To empower marginalised and migrant communities to plan for the future with dignity, clarity, and confidence. We increase access to advance care planning, estate planning, and cross-border legacy education, ensuring generational security.</p>
             </div>
         </div>
 
-        <div class="para" style="margin-top: 3rem;">
-            <h2 style="font-size: 2rem; color: var(--primary-color);">Our Vision</h2>
-            <p>A society where no family is left vulnerable because planning conversations never happened. We envision communities where:</p>
-            <ul>
-                <li>Cultural background or migration history is never a barrier to planning ahead</li>
-                <li>Individuals’ care wishes are respected across health and legal systems</li>
-                <li>Families are protected from avoidable distress, conflict, and financial hardship</li>
-                <li>Estate and legacy planning contribute to closing health and wealth inequality gaps</li>
-            </ul>
+        <div>
+            <h2 style="color: var(--primary-color);">Our Vision</h2>
+            <p>A society where no family is left vulnerable because planning conversations never happened. We envision communities where cultural background is never a barrier to planning ahead and care wishes are respected across all health systems.</p>
 
-            <h2 style="font-size: 2rem; margin-top: 3rem; color: var(--primary-color); text-align: center;">Our Values</h2>
-            <div class="vibe-card-grid" style="margin-top: 2rem;">
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Community-Led</h4><p>We are shaped by lived experience and guided by the voices of the communities we serve. Our work is done with communities, not to them.</p></div></article>
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Equity & Inclusion</h4><p>We actively challenge inequalities in access. We prioritise those most at risk of being excluded from mainstream systems.</p></div></article>
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Dignity & Compassion</h4><p>We approach sensitive conversations with empathy, respect, and cultural awareness, recognising that planning is deeply personal.</p></div></article>
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Cultural Understanding</h4><p>We recognise the complexity of transnational lives and reflect the realities of families living across multiple systems.</p></div></article>
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Prevention over Crisis</h4><p>We focus on early engagement and planning, helping families avoid unnecessary distress and harm before it arises.</p></div></article>
-                <article class="vibe-card"><div class="vibe-card-body"><h4>Trust & Integrity</h4><p>We act with transparency, professionalism, and accountability, building trust with individuals and partners.</p></div></article>
+            <h2 style="color: var(--primary-color); text-align: center; margin-top: 3rem;">Our Values</h2>
+            <div class="vibe-card-grid">
+                <article class="vibe-card"><h4>Community-Led</h4><p>Shaped by lived experience and guided by the voices of those we serve.</p></article>
+                <article class="vibe-card"><h4>Equity & Inclusion</h4><p>Actively challenging inequalities in access to service and information.</p></article>
+                <article class="vibe-card"><h4>Dignity & Compassion</h4><p>Approaching sensitive conversations with empathy and respect.</p></article>
+                <article class="vibe-card"><h4>Prevention over Crisis</h4><p>Early engagement to avoid unnecessary distress and harm before it arises.</p></article>
             </div>
         </div>
     </div>
 </section>
 
-<section data-vibe-node-id="full-blog-page-section" id="full-blog-page" class="service-section" style="display: none; min-height: 80vh;"><div data-vibe-node-id="full-blog-page-container" class="vibe-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 class="section-title" style="margin-bottom: 0; text-align: left;">Our Blog</h2>
-            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
+<!-- SERVICE DETAIL PAGES (REUSING IMAGES) -->
+<section id="organ-donation-page" class="service-section" style="display: none;">
+    <div class="vibe-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Organ Donation</h1>
+            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
-        <div class="create-post-container show-if-logged-in">
-            <button class="vibe-btn vibe-btn-primary" onclick="openModal('createPostModal')">Create New Post</button>
-        </div>
-        <div id="fullBlogGrid" class="vibe-card-grid">
-            <!-- All blog posts will be dynamically inserted here -->
-        </div>
-    </div>
-</section>
-<section data-vibe-node-id="organ-donation-page" id="organ-donation-page" class="service-section" style="display: none;"><div data-vibe-node-id="organ-donation-page-content" class="page_wrapper">
-        <div class="page_container vibe-container">
-            <div class="page_section">
-                <h1>Organ Donation</h1>
-                <div class="page_image">
-                   <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1000&auto=format&fit=crop" alt="Inclusive surgical team in a hospital environment">
-                 </div>
-                <div class="para">
-                <b>Organ Donation in the UK: Opt-Out System Unveiled</b> In May 2020, the new opt-out organ
-                donation law was passed in England. This law is a crucial step to help battle the long waiting
-                lists of patients awaiting a transplant.This groundbreaking change empowers individuals to
-                make an active choice regarding organ donation, fostering a culture of awareness and
-                understanding.
-                Become part of a movement that values informed decision-making in organ donation. Stay
-                informed, understand your options, and contribute to the broader conversation about organ
-                donation in the UK.
-                </div>
-            </div>
-            <div class="page_sidebar">
-                <div class="enquiry_wrapper">
-                    <div class="enquiry_container">
-                        <div class="enquiry_form_wrapper">
-                            <div class="enquiry_form_container">
-                               <form id="enq_organ_donation" method="post" action="https://angelsoutreachcic.org.uk/get_message.php">
-                                   <div class="labels" id="fullname_label_od"></div>
-                                   <input class="enquiry_input" id="fullname_od" type="text" name="fullname" value="Full Name" onfocus="clearField('fullname_od','Full Name')" onblur="restoreField('fullname_od','Full Name')">
-    
-                                   <div class="labels" id="email_label_od"></div>
-                                   <input class="enquiry_input" id="email_od" type="text" name="email" value="Email" onfocus="clearField('email_od','Email')" onblur="restoreField('email_od','Email')">
-    
-                                   <div class="labels" id="phone_label_od"></div>
-                                   <input class="enquiry_input" id="phone_od" type="text" name="phone" value="Phone" onfocus="clearField('phone_od','Phone')" onblur="restoreField('phone_od','Phone')">
-    
-                                   <div class="labels" id="message_label_od"></div>
-                                   <textarea class="enquiry_textarea" id="message_od" name="message" onfocus="clearField('message_od','Message')" onblur="restoreField('message_od','Message')">Message</textarea>
-    
-                                   <div class="submit_btn" onclick="document.getElementById('enq_organ_donation').submit()">Contact Us</div>
-                              </form>
-                           </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-      </div>
-    </div>
-</section>
-<section data-vibe-node-id="estate-planning-page" id="estate-planning-page" class="service-section" style="display: none;"><div data-vibe-node-id="estate-planning-page-content" class="page_wrapper">
-        <div class="page_container vibe-container">
-            <div class="page_section">
-                <h1>Estate Planning</h1>
-                <div class="page_image">
-                   <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000&auto=format&fit=crop" alt="Diverse hands signing legal documentation for future planning">
-                </div>
-                <div class="para">
-                    <p>Estate Planning is a proactive and responsible approach to managing one’s affairs during their
-                    lifetime and ensuring a smooth transition of assets to beneficiaries after their death. It
-                    addresses financial,legal, and personal considerations, providing individuals with control over
-                    their legacy and the well-being of their loved ones.</p>
-                    <p>Key components of estate planning services may include:</p>
-                    <ul>
-                        <li><b>Will and Testament:</b> A legal document specifying distribution of assets.</li>
-                        <li><b>Trusts:</b> Legal arrangements to manage assets on behalf of beneficiaries.</li>
-                        <li><b>Beneficiary Designations:</b> Keeping life insurance and retirement accounts updated.</li>
-                        <li><b>Charitable Giving:</b> Incorporating philanthropic goals.</li>
-                        <li><b>Estate Tax Planning:</b> Minimising the impact of taxes.</li>
-                        <li><b>Probate (Administration of Deceased Estates):</b> The legal process of administering the estate of a deceased person through the Probate Court.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="page_sidebar">
-                <div class="enquiry_wrapper">
-                    <div class="enquiry_container">
-                        <div class="enquiry_form_wrapper">
-                            <div class="enquiry_form_container">
-                               <form id="enq_estate_planning" method="post" action="https://angelsoutreachcic.org.uk/get_message.php">
-                                   <div class="labels" id="fullname_label_ep"></div>
-                                   <input class="enquiry_input" id="fullname_ep" type="text" name="fullname" value="Full Name" onfocus="clearField('fullname_ep','Full Name')" onblur="restoreField('fullname_ep','Full Name')">
-    
-                                   <div class="labels" id="email_label_ep"></div>
-                                   <input class="enquiry_input" id="email_ep" type="text" name="email" value="Email" onfocus="clearField('email_ep','Email')" onblur="restoreField('email_ep','Email')">
-    
-                                   <div class="labels" id="phone_label_ep"></div>
-                                   <input class="enquiry_input" id="phone_ep" type="text" name="phone" value="Phone" onfocus="clearField('phone_ep','Phone')" onblur="restoreField('phone_ep','Phone')">
-    
-                                   <div class="labels" id="message_label_ep"></div>
-                                   <textarea class="enquiry_textarea" id="message_ep" name="message" onfocus="clearField('message_ep','Message')" onblur="restoreField('message_ep','Message')">Message</textarea>
-    
-                                   <div class="submit_btn" onclick="document.getElementById('enq_estate_planning').submit()">Contact Us</div>
-                              </form>
-                           </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section data-vibe-node-id="advance-care-planning-page" id="advance-care-planning-page" class="service-section" style="display: none;"><div data-vibe-node-id="advance-care-planning-page-content" class="page_wrapper">
-        <div class="page_container vibe-container">
-            <div class="page_section">
-                <h1>Advance Care Planning</h1>
-                <div class="page_image">
-                   <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1000&auto=format&fit=crop" alt="Compassionate healthcare setting with diverse staff">
-                 </div>
-                <div class="para">
-                    <p><b>An advance Statement</b> lets you make general statements, describing your wishes and preferences about future care, should you be unable to make or communicate a decision.</p>
-                    <p><b>Lasting Power of Attorney (LPA) for Health and Welfare:</b> A legal document that empowers you to appoint a trusted individual, known as an ‘attorney’, to make crucial healthcare decisions on your behalf.</p>
-                    <p><b>Why Are Advance Directives Important?</b></p>
-                    <ul>
-                        <li><b>Preserve Autonomy:</b> Control over your decisions.</li>
-                        <li><b>Relieve Burden:</b> Ease decision-making for loved ones.</li>
-                        <li><b>Reduce Conflicts:</b> Clear guidance for family members.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="page_sidebar">
-                <div class="enquiry_wrapper">
-                    <div class="enquiry_container">
-                        <div class="enquiry_form_wrapper">
-                            <div class="enquiry_form_container">
-                               <form id="enq_acp" method="post" action="https://angelsoutreachcic.org.uk/get_message.php">
-                                   <div class="labels" id="fullname_label_acp"></div>
-                                   <input class="enquiry_input" id="fullname_acp" type="text" name="fullname" value="Full Name" onfocus="clearField('fullname_acp','Full Name')" onblur="restoreField('fullname_acp','Full Name')">
-    
-                                   <div class="labels" id="email_label_acp"></div>
-                                   <input class="enquiry_input" id="email_acp" type="text" name="email" value="Email" onfocus="clearField('email_acp','Email')" onblur="restoreField('email_acp','Email')">
-    
-                                   <div class="labels" id="phone_label_acp"></div>
-                                   <input class="enquiry_input" id="phone_acp" type="text" name="phone" value="Phone" onfocus="clearField('phone_acp','Phone')" onblur="restoreField('phone_acp','Phone')">
-    
-                                   <div class="labels" id="message_label_acp"></div>
-                                   <textarea class="enquiry_textarea" id="message_acp" name="message" onfocus="clearField('message_acp','Message')" onblur="restoreField('message_acp','Message')">Message</textarea>
-    
-                                   <div class="submit_btn" onclick="document.getElementById('enq_acp').submit()">Contact Us</div>
-                              </form>
-                           </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section data-vibe-node-id="terms-and-conditions-page" id="terms-and-conditions-page" class="service-section" style="display: none; min-height: 80vh;"><div data-vibe-node-id="terms-page-content" class="vibe-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 class="section-title" style="margin-bottom: 0; text-align: left;">Terms and Conditions</h2>
-            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
-        </div>
-        <div class="para">
-            <p>Please read these terms and conditions carefully before using AngelsOutreachcic.org.uk.</p>
-            <h4 style="font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--heading-color);">Conditions of use</h4>
-            <p>By using this website, you certify that you have read and reviewed this Agreement and that you agree to comply with its terms.</p>
-        </div>
-    </div>
-</section>
-<section data-vibe-node-id="privacy-policy-page" id="privacy-policy-page" class="service-section" style="display: none; min-height: 80vh;"><div data-vibe-node-id="privacy-policy-content" class="vibe-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 class="section-title" style="margin-bottom: 0; text-align: left;">Privacy Policy</h2>
-            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
-        </div>
-        <div class="para">
-            <p>This privacy policy will help you understand how Angels Outreach Community Interest Company uses and protects the data you provide to us.</p>
-        </div>
+        <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop" alt="Organ Donation" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+        <p>In May 2020, the new opt-out organ donation law was passed in England. This groundbreaking change empowers individuals to make an active choice, fostering a culture of awareness. Become part of a movement that values informed decision-making.</p>
     </div>
 </section>
 
-<div data-vibe-node-id="login-modal" class="vibe-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle" aria-hidden="true"><div data-vibe-node-id="login-modal-backdrop" class="vibe-modal-backdrop" onclick="closeModal('loginModal')"></div>
-<div data-vibe-node-id="login-modal-panel" class="vibe-modal-panel" role="document">
-    <button class="vibe-modal-close" aria-label="Close" onclick="closeModal('loginModal')">✕</button>
-    <h3 id="loginModalTitle" style="margin-top:0; font-size: 1.75rem;">Login</h3>
-    <form id="loginForm" class="contact-form" style="max-width: none;">
-        <label class="vibe-field">
-            <input id="loginEmail" type="email" required="" placeholder=" " value="user@example.com">
-            <span class="vibe-field-label">Email Address</span>
-        </label>
-        <label class="vibe-field">
-            <input id="loginPassword" type="password" required="" placeholder=" " value="password">
-            <span class="vibe-field-label">Password</span>
-        </label>
-        <div id="loginError" style="color: red; margin-bottom: 1rem; text-align: center;"></div>
-        <button type="submit" class="vibe-btn vibe-btn-primary">Login</button>
-    </form>
-  </div>
-</div>
-<div data-vibe-node-id="create-post-modal" class="vibe-modal" id="createPostModal" role="dialog" aria-modal="true" aria-labelledby="createPostModalTitle" aria-hidden="true"><div data-vibe-node-id="create-post-modal-backdrop" class="vibe-modal-backdrop" onclick="closeModal('createPostModal')"></div>
-<div data-vibe-node-id="create-post-modal-panel" class="vibe-modal-panel" role="document">
-    <button class="vibe-modal-close" aria-label="Close" onclick="closeModal('createPostModal')">✕</button>
-    <h3 id="createPostModalTitle" style="margin-top:0; font-size: 1.75rem;">Create New Post</h3>
-    <form id="createPostForm" class="contact-form" data-vibe-form="blog-posts" style="max-width: none;">
-        <label class="vibe-field">
-            <input type="text" id="postTitle" name="title" required="" placeholder=" ">
-            <span class="vibe-field-label">Post Title</span>
-        </label>
-        <label class="vibe-field">
-            <input type="url" id="postImageUrl" name="imageUrl" placeholder=" ">
-            <span class="vibe-field-label">Image URL</span>
-        </label>
-        <div id="postContentEditor" class="vibe-editor" contenteditable="true"></div>
-        <input type="hidden" name="content" id="postContentInput">
-        <button type="submit" class="vibe-btn vibe-btn-primary" style="margin-top: 1rem;">Save Post</button>
-    </form>
-  </div>
-</div>
-<section data-vibe-node-id="admin-page-relocated" id="admin-page" class="service-section" style="display: none; min-height: 80vh;">
-    <div class="vibe-container admin-page-container">
-        <h2 class="section-title">Admin Dashboard</h2>
-        <div id="admin-data-table-container" class="admin-table-wrapper">
-            <p>Loading Admin Tools...</p>
+<section id="advance-care-planning-page" class="service-section" style="display: none;">
+    <div class="vibe-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Advance Care Planning</h1>
+            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
         </div>
+        <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop" alt="Care Planning" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+        <p>Advance Statements and Lasting Power of Attorney (LPA) ensure that your wishes are honored even if you cannot speak for yourself. We help you preserve autonomy and relieve the burden on your loved ones.</p>
     </div>
 </section>
-<footer data-vibe-node-id="page-footer" class="vibe-footer" id="page-footer">
-<div data-vibe-node-id="footer-content-container" class="vibe-container" id="footer-content-container"><div data-vibe-node-id="footer-grid" class="footer-grid">
-            <div id="footer_section1" class="footer_section">
-                <div class="footer_logo">ANGELS OUTREACH</div>
-                <div class="company_synopsis">Community Interest Company</div>
+
+<section id="estate-planning-page" class="service-section" style="display: none;">
+    <div class="vibe-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Estate Planning</h1>
+            <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <img src="https://plus.unsplash.com/premium_photo-1661407696331-6ab41ffbe05a?q=80&w=1170&auto=format&fit=crop" alt="Estate Planning" style="width:100%; border-radius:12px; margin-bottom:2rem;">
+        <p>Manage your affairs during your lifetime and ensure a smooth transition of assets. We cover Wills, Trusts, Beneficiary Designations, and cross-border gift planning.</p>
+    </div>
+</section>
+
+<section id="full-blog-page" class="service-section" style="display: none;">
+    <div class="vibe-container">
+        <h1>Blog</h1>
+        <p>Blog updates coming soon. Please check back for more information on community outreach and healthcare planning.</p>
+        <button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back to Home</button>
+    </div>
+</section>
+
+<footer class="vibe-footer">
+    <div class="vibe-container">
+        <div class="footer-grid">
+            <div class="footer_section">
+                <h3 style="color:#fff;">ANGELS OUTREACH</h3>
+                <p>Community Interest Company</p>
             </div>
-            <div id="footer_section2" class="footer_section">
-                <div class="footer_title">Company</div>
+            <div class="footer_section">
+                <div class="footer_title">Quick Links</div>
+                <a href="#" onclick="showPage('home-content')">Home</a>
                 <a href="#" onclick="showPage('about-us-page')">About Us</a>
                 <a href="#" onclick="showPage('mission-page')">Our Mission</a>
-                <a href="#" onclick="showPage('full-blog-page')">Blog</a>
-                <a href="#" onclick="showPage('terms-and-conditions-page')">Terms &amp; Conditions</a>
             </div>
-            <div id="footer_section3" class="footer_section">
+            <div class="footer_section">
                 <div class="footer_title">Services</div>
                 <a href="#" onclick="showPage('organ-donation-page')">Organ Donation</a>
-                <a href="#" onclick="showPage('advance-care-planning-page')">Advance Care Planning</a>
+                <a href="#" onclick="showPage('advance-care-planning-page')">ACP</a>
                 <a href="#" onclick="showPage('estate-planning-page')">Estate Planning</a>
             </div>
-            <div id="footer_section4" class="footer_section">
+            <div class="footer_section">
                 <div class="footer_title">Contact</div>
-                <p>Reach out: angelsoutreachcic@outlook.com<br>Call: 07956169423</p>
+                <p>angelsoutreachcic@outlook.com</p>
+                <p>07956169423</p>
             </div>
         </div>
-</div>
-<div data-vibe-node-id="copyright-wrapper" class="copyright_wrapper">
-        <div class="vibe-container copyright_container">
-            ©2025 Angels Outreach Community Interest Company
+        <div style="text-align: center; border-top: 1px solid #374151; padding-top: 2rem;">
+            ©2025 Angels Outreach CIC. All Rights Reserved.
         </div>
     </div>
 </footer>
 
 <script>
-/* (Existing VibeDB logic preserved) */
-(function() {
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5p0NpHuIfVUuziW4VkqwTJERjAMpgIdKz0yCO4vVkFt38FerGObaxQQxqPJ2h8RB1yA/exec';
-    const USER_ID = 'user-e4a3399d-d41c-423f-9f0d-05603a1b4e4b';
-    const PROJECT_ID = 'ac';
-    window.vibe = {
-        loadData: async function(formId) {
-            // Simplified for this bundle
-            return [];
-        },
-        deleteData: async function() { return true; },
-        replaceTableData: async function() { return true; }
-    };
-})();
-</script>
-
-<script>
-(function() {
-    window.openModal = function(id){document.getElementById(id)?.classList.add('is-open');}
-    window.closeModal = function(id){document.getElementById(id)?.classList.remove('is-open');}
-
-    window.showPage = function(pageId) {
-        const pages = ['home-content', 'full-blog-page', 'organ-donation-page', 'estate-planning-page', 'advance-care-planning-page', 'terms-and-conditions-page', 'privacy-policy-page', 'admin-page', 'about-us-page', 'mission-page'];
-        pages.forEach(p => { if(document.getElementById(p)) document.getElementById(p).style.display = 'none'; });
-        
-        const page = document.getElementById(pageId);
-        if (page) {
-            page.style.display = 'block';
-            window.scrollTo(0, 0);
-        }
+    function showPage(pageId) {
+        const pages = ['home-content', 'about-us-page', 'mission-page', 'organ-donation-page', 'advance-care-planning-page', 'estate-planning-page', 'full-blog-page'];
+        pages.forEach(id => {
+            const el = document.getElementById(id);
+            if(el) el.style.display = 'none';
+        });
+        document.getElementById(pageId).style.display = 'block';
+        document.getElementById('nav-menu').classList.remove('is-open');
+        window.scrollTo(0, 0);
     }
 
-    window.clearField = function(arg,val) { var field = document.getElementById(arg); if(field && field.value == val) field.value = ""; }
-    window.restoreField = function(arg,val) { var field = document.getElementById(arg); if(field && field.value == "") field.value = val; }
-
-    document.querySelector('.vibe-nav-toggle')?.addEventListener('click', () => {
-        document.querySelector('.vibe-nav-menu').classList.toggle('is-open');
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('is-open');
     });
-
-    function checkLoginStatus() {
-        if (localStorage.getItem('isLoggedIn') === 'true') {
-            document.body.classList.add('logged-in');
-        } else {
-            document.body.classList.remove('logged-in');
-        }
-    }
-
-    checkLoginStatus();
-})();
 </script>
+
 </body>
 </html>
-    
