@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -559,13 +560,13 @@ body.logged-in .hide-if-logged-in { display: none; }
     }
 
     window.vibe = {
-        loadData: async function(fId) { 
-            showLoader();
+        loadData: async function(fId, silent = false) { 
+            if(!silent) showLoader();
             try {
                 const comp = await jsonpRequest('loadProject', { userId: USER_ID, projectId: getFormDbId(fId) });
-                hideLoader();
+                if(!silent) hideLoader();
                 return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(comp), c => c.charCodeAt(0))));
-            } catch(e) { hideLoader(); return []; }
+            } catch(e) { if(!silent) hideLoader(); return []; }
         },
         replaceTableData: async function(fId, arr) { showLoader(); await saveProject(getFormDbId(fId), arr); hideLoader(); },
         deleteData: async function(fId, ts) {
@@ -644,7 +645,7 @@ body.logged-in .hide-if-logged-in { display: none; }
     async function renderBlog() {
         const g = document.getElementById('blogGrid'), fg = document.getElementById('fullBlogGrid');
         if(!g || !fg) return;
-        const posts = await window.vibe.loadData('blog-posts');
+        const posts = await window.vibe.loadData('blog-posts', true);
         g.innerHTML = ''; fg.innerHTML = '';
         posts.reverse().forEach((p, idx) => {
             const html = `<article class="vibe-card">
