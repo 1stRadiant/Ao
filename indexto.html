@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angels Outreach Community Interest Company</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="GigaGrowth">
+    <meta name="description" content="Angels Outreach Community Interest Company."/>
+    <link rel="icon" type="image/png" href="https://1stradiant.github.io/Ao/1766319897858.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&family=Barlow:wght@500&family=Kumbh+Sans:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Libraries for parsing Documents in the browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <style>
+/* Global Styles */
+:root {
+    --primary-color: #800020;
+    --primary-hover: #600018;
+    --text-color: #4B5563;
+    --heading-color: #111827;
+    --bg-light: #f9fafb;
+    --white: #fff;
+    --border-color: #e5e7eb;
+    --danger: #ef4444;
+}
+
+*, *::before, *::after { box-sizing: border-box }
+html { scroll-behavior: smooth }
+body { font-family: 'Inter', sans-serif; color: var(--text-color); margin: 0; line-height: 1.7; background-color: var(--white); font-size: 1.1rem; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; color: var(--heading-color); font-weight: 700 }
+a { text-decoration: none; color: var(--primary-color); transition: color 0.2s ease }
+a:hover { color: var(--primary-hover) }
+
+.vibe-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;width:100%}
+.section-title { text-align: center; font-size: 2.8rem; margin-bottom: 3rem }
+
+/* Navbar */
+.vibe-nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.07);position:sticky;top:0;z-index:2000;padding:1rem 0}
+.vibe-nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
+.vibe-nav-menu{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0}
+.vibe-nav-menu a{color:#4B5563;font-weight:500; cursor: pointer; font-size: 1.05rem;}
+.vibe-nav-toggle{display:none;background:transparent;border:none;cursor:pointer; padding: 10px;}
+.icon-bar{display:block;width:24px;height:2px;background-color:#111827;border-radius:2px;margin:5px 0}
+
+/* Logo Styles */
+.logo { display: block; position: relative; width: 315px; height: 60px; text-decoration: none }
+.logo_image {
+  display: block; position: absolute; width: 55px; height: 55px; top: 2.5px;
+  background-image: url('https://1stradiant.github.io/Ao/1766319897858.png');
+  background-size: contain; background-repeat: no-repeat; background-position: center;
+}
+.logo_text { display: block; position: absolute; left: 65px; width: 250px; height: 35px; line-height: 35px; font-family: 'Barlow', sans-serif; font-size: 26px; font-weight: 500; color: #800020 }
+.logo_sub_text { display: block; position: absolute; left: 65px; top: 35px; width: 250px; height: 20px; line-height: 20px; font-family: 'Kumbh Sans', sans-serif; font-size: 15px; font-weight: 400; color: #800020 }
+
+/* Dropdown */
+.dropdown { position: relative }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; padding: 0.5rem 0; list-style: none; min-width: 240px; z-index: 2001; margin-top:0.5rem }
+.dropdown:hover .dropdown-menu { display: block }
+.dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--text-color) }
+
+/* Global Loader */
+#global-loader {
+    position: fixed; inset: 0; background: rgba(255,255,255,0.85);
+    z-index: 9999; display: none; align-items: center; justify-content: center; flex-direction: column;
+}
+.spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Hero Section */
+.banner_wrapper.vibe-hero { 
+    background: url(https://images.stockcake.com/public/6/a/6/6a6c0108-ef7a-4997-989a-c40b6e20743f_large/diverse-team-smiling-stockcake.jpg) no-repeat center/cover;
+    position: relative; color: var(--white); padding: 10rem 0; text-align: center}
+.banner_wrapper.vibe-hero::before { content: ''; position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.45); z-index: 1 }
+.banner_wrapper.vibe-hero .vibe-container { position: relative; z-index: 2 }
+.banner_wrapper.vibe-hero h1 { font-size: 4rem; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9); text-shadow: 0 2px 10px rgba(0,0,0,0.8) }
+.banner_wrapper.vibe-hero p { font-size: 1.4rem; color: rgba(255, 255, 255, 0.9); max-width: 850px; margin: 0 auto 2.5rem; text-shadow: 0 1px 5px rgba(0,0,0,0.8) }
+
+/* Buttons */
+.vibe-btn { padding: .85rem 1.75rem; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all .2s ease; display: inline-block; border: 1px solid transparent; text-decoration: none; font-size: 1.05rem;}
+.vibe-btn-primary { background: var(--primary-color); color: #fff }
+.vibe-btn-primary:hover { background: var(--primary-hover); color: #fff; }
+.vibe-btn-outline { background: transparent; border-color: #d1d5db; color: #374151 }
+.vibe-btn-outline:hover { background: #f9fafb; border-color: var(--primary-color); color: var(--primary-color) }
+.vibe-btn-danger { background-color: var(--danger); color: #fff; }
+
+/* Service Layout */
+.service-section { padding: 6rem 0 }
+.service-section:nth-child(even) { background-color: var(--bg-light) }
+.service-container { display: flex; align-items: center; gap: 4rem }
+.service-container.reverse { flex-direction: row-reverse }
+.service-image, .service-text { flex: 1 }
+.service-image img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1); object-fit: cover; aspect-ratio: 4/3; }
+
+/* Cards & Modals */
+.vibe-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.vibe-card{border-radius:0.75rem;overflow:hidden;background-color:#fff;border:1px solid var(--border-color);box-shadow:0 4px 6px -1px rgba(0,0,0,.05);transition:transform .2s ease; cursor: pointer;}
+.vibe-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1)}
+.vibe-card-body{padding:1.5rem}
+
+/* Modal System */
+.vibe-modal{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;}.vibe-modal.is-open{display:flex;}
+.vibe-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}.vibe-modal-panel{position:relative;max-width:750px;width:90%;padding:2.5rem;background:#fff;border-radius:.75rem;box-shadow:0 20px 25px -5px rgba(0,0,0,.1); z-index: 3001; max-height: 90vh; overflow-y: auto}
+.vibe-modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:none;cursor:pointer; font-size: 1.5rem; color: #666}
+
+/* Confirmation Modal */
+.vibe-confirm { display: none; position: fixed; inset: 0; z-index: 4000; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; }
+.vibe-confirm.is-open { display: flex; }
+.vibe-confirm .panel { background: #fff; padding: 2rem; border-radius: 12px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+
+/* Form Styles */
+.contact-section { background: var(--bg-light); padding: 6rem 0 }
+.contact-form { max-width: 650px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem }
+.vibe-field{position:relative;display:block}.vibe-field input{width:100%;padding:1rem;border:1px solid #d1d5db;border-radius:8px; background-color:var(--white); font-size:1.1rem}.vibe-field-label{position:absolute;left:12px;top:16px;transition:all .2s ease;color:#6B7280;background:#fff;padding:0 .25rem;pointer-events:none}.vibe-field input:focus + .vibe-field-label,.vibe-field input:not(:placeholder-shown) + .vibe-field-label{transform:translateY(-50%) scale(.85);top:0}
+.vibe-textarea{width:100%;padding:1rem;border:1px solid #d1d5db;border-radius:8px;min-height:150px; font-family: inherit; font-size: 1.1rem;}
+
+/* Editor Styles */
+.vibe-editor img { max-width: 100%; height: auto; border-radius: 8px; margin: 0.5rem 0; }
+#single-blog-content img { max-width: 100%; height: auto; border-radius: 12px; margin: 1rem 0; }
+
+/* Footer Fixes */
+.vibe-footer { background: #111827; color: #E5E7EB; padding: 5rem 0 2rem }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 3rem }
+.footer_title { color: #fff; margin-bottom: 1.5rem; font-weight: 700; font-size: 1.2rem }
+.vibe-footer a { display: block; color: #9CA3AF; margin-bottom: 0.85rem; text-decoration: none; transition: color 0.2s; font-size: 1.05rem; }
+.vibe-footer a:hover { color: #fff }
+
+/* Admin Table */
+.admin-table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #fff; border-radius: 8px; overflow: hidden; }
+.admin-table th, .admin-table td { padding: 1.1rem; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle;}
+.admin-table th { background: #f8f9fa; font-weight: 600; color: #111; }
+.admin-table tr:hover { background: #fafafa; }
+
+/* Session Classes */
+.show-if-logged-in { display: none; }
+body.logged-in .show-if-logged-in { display: block; }
+body.logged-in .hide-if-logged-in { display: none; }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .vibe-nav-toggle { display: block }
+    .vibe-nav-menu { position: fixed; left: -100%; top: 0; height: 100vh; width: 280px; background: #fff; flex-direction: column; padding: 6rem 2rem; transition: left .3s ease; z-index: 2001; box-shadow: 4px 0 10px rgba(0,0,0,0.1); }
+    .vibe-nav-menu.is-open { left: 0 }
+    .service-container, .service-container.reverse { flex-direction: column !important; text-align: left; gap: 2.5rem; }
+    .service-image, .service-text { width: 100%; flex: none; }
+    .banner_wrapper.vibe-hero h1 { font-size: 2.5rem }
+    .banner_wrapper.vibe-hero p { font-size: 1.2rem }
+    .logo { width: 260px; }
+}
+    
+.service-text h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+.vibe-card-body h4 { font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem;}
+</style>
+</head>
+<body>
+
+<div id="global-loader"><div class="spinner"></div><p style="margin-top:1rem; font-weight:600; color:var(--primary-color)" id="loader-text">Processing...</p></div>
+
+<nav class="vibe-nav" id="main-nav-container">
+  <div class="vibe-container vibe-nav-inner">
+    <a class="logo" href="#" onclick="showPage('home-content')">
+        <div class="logo_image"></div>
+        <div class="logo_text">ANGELS OUTREACH</div>
+        <div class="logo_sub_text">COMMUNITY INTEREST COMPANY</div>
+    </a>
+    <button class="vibe-nav-toggle" id="menu-toggle-btn" aria-label="Toggle navigation">
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+    </button>
+    <ul class="vibe-nav-menu" id="nav-list">
+      <li><a href="#" onclick="showPage('home-content')">Home</a></li>
+      <li><a href="#" onclick="showPage('about-us-page')">About Us</a></li>
+      <li><a href="#" onclick="showPage('mission-page')">Our Mission</a></li>
+      <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown-menu">
+              <li><a href="#" onclick="showPage('organ-donation-page')">Organ Donation</a></li>
+              <li><a href="#" onclick="showPage('advance-care-planning-page')">Advance Care Planning</a></li>
+              <li><a href="#" onclick="showPage('estate-planning-page')">Estate Planning</a></li>
+          </ul>
+      </li>
+      <li><a href="#" onclick="showPage('full-blog-page')">Blog</a></li>
+      <li><a href="#enquiry_wrapper" onclick="showPage('home-content'); setTimeout(()=>window.location.hash='#enquiry_wrapper', 100);">Contact</a></li>
+      <li class="hide-if-logged-in"><button class="vibe-btn vibe-btn-outline" style="padding: 0.4rem 1rem;" onclick="openModal('loginModal')">Login</button></li>
+      <li class="show-if-logged-in"><a href="#" onclick="showPage('admin-page')">Admin</a></li>
+      <li class="show-if-logged-in"><button class="vibe-btn vibe-btn-primary" style="padding: 0.4rem 1rem;" id="logoutBtn">Logout</button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGES -->
+<div id="home-content">
+    <section class="vibe-hero banner_wrapper">
+        <div class="vibe-container">
+            <h1>Power to the People!</h1>
+            <p>Sharing healthcare preferences with loved ones and creating estate plans is a valuable gift to those closest to you.</p>
+            <a class="vibe-btn vibe-btn-primary" href="#enquiry_wrapper">Get in touch</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <section class="service-section">
+            <div class="vibe-container service-container">
+                <div class="service-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487789808-2ccd3ea6d392?q=80&w=1170&auto=format&fit=crop" alt="Organ Donation">
+                </div>
+                <div class="service-text">
+                    <h2>Organ Donation</h2>
+                    <p>Through educational initiatives and impactful campaigns, we strive to create a society that recognises the transformative power of this selfless act.</p>
+                    <a href="#" onclick="showPage('organ-donation-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="vibe-container service-container reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1587822766378-e47b139c56ad?q=80&w=1332&auto=format&fit=crop" alt="Advance Care Planning">
+                </div>
+                <div class="service-text">
+                    <h2>Advance Care Planning</h2>
+                    <p>Engaging and informative sessions to educate communities on the importance of sharing and documenting their healthcare decisions.</p>
+                    <a href="#" onclick="showPage('advance-care-planning-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="vibe-container service-container">
+                <div class="service-image">
+                    <img src="https://marvel-b1-cdn.bc0a.com/f00000000142088/www.ameritas.com/wp-content/uploads/2023/08/Estate_Planning_HERO-1280x720.jpg" alt="Estate Planning">
+                </div>
+                <div class="service-text">
+                    <h2>Estate Planning</h2>
+                    <p>Empowering individuals to make informed decisions about managing their assets, funerals, and distribution of estates.</p>
+                    <a href="#" onclick="showPage('estate-planning-page')" class="vibe-btn vibe-btn-outline">Find out more</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="blog-section" class="service-section" style="background-color: var(--bg-light);">
+        <div class="vibe-container">
+            <h2 class="section-title">From Our Blog</h2>
+            <div class="vibe-card-grid" id="blogGrid"></div>
+        </div>
+    </section>
+
+    <section id="enquiry_wrapper" class="contact-section">
+        <div class="vibe-container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form" data-vibe-form="messages">
+                <label class="vibe-field"><input type="text" name="fullname" required placeholder=" "><span class="vibe-field-label">Full Name</span></label>
+                <label class="vibe-field"><input type="email" name="email" required placeholder=" "><span class="vibe-field-label">Email Address</span></label>
+                <textarea class="vibe-textarea" name="message" placeholder="Your message..."></textarea>
+                <button type="submit" class="vibe-btn vibe-btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<!-- ABOUT US FULL -->
+<section id="about-us-page" class="service-section" style="display: none;">
+    <div class="vibe-container para">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>About Us</h1><button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <p><b>Angels Outreach Community Interest Company</b> is a community-led social enterprise, created by the community and run for the community. We exist to ensure that everyone, regardless of background, culture, faith, or immigration status has access to the knowledge, tools, and support needed to plan for the future with dignity and confidence.</p>
+        <p>Our work sits at the intersection of estate planning, advance care planning, and health equity. While many organisations address individual aspects of end-of-life awareness, Angels Outreach CIC is unique in bringing these elements together through culturally competent, trust-based community engagement, particularly for migrant, diaspora, and marginalised communities.</p>
+        
+        <h2>Why We Exist</h2>
+        <p>Too many families experience unnecessary distress, conflict, and financial hardship because planning conversations never happened, or happened too late. Within Black, migrant, and disadvantaged communities, barriers such as cultural taboos, lack of access to trusted information, language differences, and cross-border legal complexity often prevent people from preparing adequately.</p>
+        <p>We exist to remove those barriers.</p>
+        <p>Angels Outreach CIC works to ensure that families are empowered to make informed decisions about:</p>
+        <ul>
+            <li>How they wish to be cared for if they become unwell</li>
+            <li>How their assets and property should be managed and passed on</li>
+            <li>How their wishes can be respected across different legal systems and countries</li>
+        </ul>
+
+        <h2>What We Do</h2>
+        <p>We support individuals, families, and communities through:</p>
+        <ul>
+            <li><b>Estate Planning Education:</b> Raising awareness about wills, trusts, and legacy planning, with particular attention to cross-border estates involving the UK and countries in Africa, Asia, and the Caribbean.</li>
+            <li><b>Advance Care Planning (ACP):</b> Helping people understand and document their wishes for care, treatment, and decision-making during serious illness or incapacity, enhancing both physical and mental wellbeing.</li>
+            <li><b>Community Engagement & Workshops:</b> Delivering accessible workshops, conversations, and training sessions in partnership with community groups, faith organisations, and charities.</li>
+            <li><b>Health Equity & Inequality Reduction:</b> Addressing the disproportionate impact of poor planning on migrant and marginalised communities, and supporting families to build intergenerational security and resilience.</li>
+        </ul>
+
+        <h2>Our Approach</h2>
+        <p>We believe effective support must be:</p>
+        <ul>
+            <li><b>Community-led</b> – shaped by lived experience</li>
+            <li><b>Culturally sensitive</b> – respectful of faith, tradition, and identity</li>
+            <li><b>Accessible</b> – clear, practical, and free from unnecessary jargon</li>
+            <li><b>Preventative</b> – helping families avoid crisis before it happens</li>
+        </ul>
+        <p>Our work is rooted in trust, education, and empowerment—not fear or pressure.</p>
+
+        <h2>Who We Work With</h2>
+        <p>Angels Outreach CIC collaborates with a wide range of partners, including:</p>
+        <ul>
+            <li>Community and grassroots organisations</li>
+            <li>Faith and cultural groups</li>
+            <li>Hospices and health providers</li>
+            <li>Local authorities and health equity networks</li>
+        </ul>
+        <p>We are proud to work alongside organisations such as Sue Ryder, Utulivu, Project Salama, ACRE (Action for Communities in Rural England), and others committed to reducing inequality and improving community wellbeing.</p>
+    </div>
+</section>
+
+<!-- OUR MISSION FULL -->
+<section id="mission-page" class="service-section" style="display: none;">
+    <div class="vibe-container para">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Our Mission</h1><button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <p>To empower marginalised and migrant communities to plan for the future with dignity, clarity, and confidence.</p>
+        <p>Angels Outreach CIC exists to increase access to advance care planning, estate planning, and cross-border legacy education, ensuring individuals and families are informed, prepared, and supported to make decisions that protect their wellbeing, wishes, and generational security.</p>
+        
+        <h2>Our Vision</h2>
+        <p>A society where no family is left vulnerable because planning conversations never happened.</p>
+        <p>We envision communities where:</p>
+        <ul>
+            <li>Cultural background or migration history is never a barrier to planning ahead</li>
+            <li>Individuals’ care wishes are respected across health and legal systems</li>
+            <li>Families are protected from avoidable distress, conflict, and financial hardship</li>
+            <li>Estate and legacy planning contribute to closing health and wealth inequality gaps</li>
+        </ul>
+
+        <h2>Our Values</h2>
+        
+        <h4>Community-Led</h4>
+        <p>We are shaped by lived experience and guided by the voices of the communities we serve. Our work is done with communities, not to them.</p>
+        
+        <h4>Equity & Inclusion</h4>
+        <p>We actively challenge inequalities in access to information, services, and support. We prioritise those most at risk of being excluded from mainstream systems.</p>
+        
+        <h4>Dignity & Compassion</h4>
+        <p>We approach sensitive conversations with empathy, respect, and cultural awareness, recognising that planning is deeply personal.</p>
+        
+        <h4>Education & Empowerment</h4>
+        <p>We believe knowledge is power. Our role is to inform, explain, and equip.</p>
+        
+        <h4>Cultural & Cross-Border Understanding</h4>
+        <p>We recognise the complexity of transnational lives and design our services to reflect the realities of families living across multiple legal and cultural systems.</p>
+        
+        <h4>Prevention over Crisis</h4>
+        <p>We focus on early engagement and planning, helping families avoid unnecessary distress, conflict, and harm before it arises.</p>
+        
+        <h4>Trust & Integrity</h4>
+        <p>We act with transparency, professionalism, and accountability, building trust with individuals, families, and partners.</p>
+    </div>
+</section>
+
+<!-- ORGAN DONATION FULL -->
+<section id="organ-donation-page" class="service-section" style="display: none;">
+    <div class="vibe-container para">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Organ Donation</h1><button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <p><b>Organ Donation in the UK: Opt-Out System Unveiled</b></p>
+        <p>In May 2020, the new 'opt-out' organ donation law was passed in England. This law is a crucial step to help battle the long waiting lists of patients awaiting a transplant. This groundbreaking change empowers individuals to make an active choice regarding organ donation, fostering a culture of awareness and understanding.</p>
+        <p>Become part of a movement that values informed decision-making in organ donation. Stay informed, understand your options, and contribute to the broader conversation about organ donation in the UK.</p>
+    </div>
+</section>
+
+<!-- ADVANCE CARE PLANNING FULL -->
+<section id="advance-care-planning-page" class="service-section" style="display: none;">
+    <div class="vibe-container para">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Advance Care Planning</h1><button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <p><b>An advance Statement</b> lets you make general statements, describing your wishes and preferences about future care, should you be unable to make or communicate a decision or express your preferences at the time.</p>
+        <p>You may want it to reflect religious or other beliefs and important aspects of your life. It is helpful to write this information down, so people can refer to it if they want to know what you like and what is important to you. It is not a legal document.</p>
+        <p><b>Lasting Power of Attorney (LPA) for Health and Welfare:</b> A legal document that empowers you to appoint a trusted individual, known as an 'attorney', to make crucial healthcare and personal care decisions on your behalf when you are unable to due to illness, incapacity or any other reason.</p>
+        <p>When creating a Lasting Power of Attorney (LPA) for Health and care Welfare, let your chosen attorney(s) know if you have an advance statement. This alerts them to what you would want to happen, if they need to make decisions on your behalf.</p>
+        <p>It only comes into force if you are unable to make your own decisions.</p>
+        <p><b>Lasting Power of Attorney for Property and Finances:</b> Gives your attorney the power to make decisions about your property and financial matters. This may include managing your bank or building society accounts, paying bills, collecting your pension or benefits or, selling your home.</p>
+        <p>Once registered with the Office of the Public Guardian, it can be used immediately or held in readiness until required.</p>
+        <p><b>Why Are Advance Directives Important?</b></p>
+        <p>Advance directives are essential for several reasons:</p>
+        <ul>
+            <li><b>Preserve Autonomy:</b> They allow you to maintain control over your healthcare decisions, even when you cannot communicate your wishes.</li>
+            <li><b>Relieve Burden:</b> Advance directives ease the decision-making burden on your loved ones, ensuring that they are aware of your preferences and can respect your choices.</li>
+            <li><b>Ensure Quality of Life:</b> They enable you to outline your expectations for medical treatment and interventions, promoting a higher quality of life aligned with your values.</li>
+            <li><b>Reduce Conflicts:</b> Advance directives can reduce potential conflicts among family members and healthcare providers by providing clear guidance.</li>
+        </ul>
+        <p><b>Creating Advance Directives</b></p>
+        <p>Creating advance directives is a straightforward process:</p>
+        <ul>
+            <li><b>Consider Your Values:</b> Think about your healthcare preferences, values, and goals, especially in challenging medical situations.</li>
+            <li><b>Consult with Loved Ones:</b> Discuss your wishes with your family and healthcare proxy to ensure they understand and support your decisions.</li>
+            <li><b>Complete the Documents:</b> Work with legal professionals to create and formalise your advance directives. These documents must comply with your state's laws.</li>
+            <li><b>Distribute Copies:</b> Provide copies of your advance directives to your healthcare providers, family members, and your chosen healthcare proxy.</li>
+            <li><b>Review and Update:</b> Periodically review and update your advance directives to ensure they reflect your current preferences and circumstances.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ESTATE PLANNING FULL -->
+<section id="estate-planning-page" class="service-section" style="display: none;">
+    <div class="vibe-container para">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1>Estate Planning</h1><button class="vibe-btn vibe-btn-outline" onclick="showPage('home-content')">Back</button>
+        </div>
+        <p>Estate Planning is a proactive and responsible approach to managing one’s affairs during their lifetime and ensuring a smooth transition of assets to beneficiaries after their death. It addresses financial, legal, and personal considerations, providing individuals with control over their legacy and the well-being of their loved ones.</p>
+        <p>Key components of estate planning services may include:</p>
+        <ul>
+            <li><b>Will and Testament:</b> A legal document that specifies how a person's assets should be distributed upon their death. It may also include provisions for the care of minor children and the appointment of an executor to carry out the instructions.</li>
+            <li><b>Trusts:</b> Legal arrangements that allow a third party, known as the trustee, to hold and manage assets on behalf of beneficiaries. Trusts can be used to avoid probate, provide for minor children, and offer flexibility in distributing assets.</li>
+            <li><b>Beneficiary Designations:</b> Ensuring that beneficiary designations on life insurance policies, retirement accounts, and other financial instruments are up-to-date and aligned with the individual's wishes.</li>
+            <li><b>Gift Planning:</b> Strategies for gifting assets during one's lifetime to minimise tax implications and potentially reduce the size of the taxable estate.</li>
+            <li><b>Charitable Giving:</b> Incorporating philanthropic goals into the estate plan through charitable trusts, foundations, or other giving mechanisms.</li>
+            <li><b>Estate Tax Planning:</b> Strategies to minimise the impact of estate taxes, which may include the use of trusts, gifting, and other tax-efficient planning tools.</li>
+            <li><b>Probate Avoidance:</b> Structuring the estate to minimise the need for probate, a legal process that validates a will and oversees the distribution of assets.</li>
+            <li><b>Probate (Administration of Deceased Estates):</b> The legal process of administering the estate of a deceased person through the Probate Court. This process typically involves validating and executing their will, settling outstanding debts, and distributing the remaining assets to the heirs or beneficiaries as outlined in the will or as determined by applicable laws. It is a crucial step in managing the affairs of the deceased and ensuring a lawful and orderly transfer of property and assets.</li>
+        </ul>
+        <p>The primary goals of estate planning include ensuring that a person's wishes are honoured, minimising tax liabilities, and facilitating the smooth transfer of assets to beneficiaries.</p>
+    </div>
+</section>
+
+<!-- ADMIN DASHBOARD -->
+<section id="admin-page" class="service-section" style="display: none; min-height: 80vh;">
+    <div class="vibe-container">
+        <h2 class="section-title">Admin Dashboard</h2>
+        <div style="display:flex; gap:1rem; margin-bottom:2rem; flex-wrap:wrap;">
+            <select id="admin-table-select" style="padding:0.75rem; border-radius:8px; border:1px solid #ddd;">
+                <option value="">-- Select Table --</option>
+                <option value="user-accounts">User Accounts</option>
+                <option value="blog-posts">Blog Posts</option>
+                <option value="messages">Contact Messages</option>
+            </select>
+            <button class="vibe-btn vibe-btn-primary" onclick="openCreatePost()">Add New Blog Post</button>
+        </div>
+        <div id="admin-data-container" style="overflow-x:auto;">
+            <p>Please select a table above to view and manage data.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG LIST -->
+<section id="full-blog-page" class="service-section" style="display: none; min-height: 80vh;">
+    <div class="vibe-container">
+        <h2 class="section-title">Our Blog</h2>
+        <div id="fullBlogGrid" class="vibe-card-grid"></div>
+        <button class="vibe-btn vibe-btn-outline" style="margin-top:2rem;" onclick="showPage('home-content')">Back Home</button>
+    </div>
+</section>
+
+<!-- SINGLE BLOG POST READING VIEW -->
+<section id="single-blog-page" class="service-section" style="display: none; min-height: 80vh;">
+    <div class="vibe-container para">
+        <button class="vibe-btn vibe-btn-outline" style="margin-bottom: 2rem;" onclick="showPage('full-blog-page')">← Back to Blog</button>
+        <div id="single-blog-content" style="max-width: 850px; margin: 0 auto;"></div>
+    </div>
+</section>
+
+<!-- MODALS -->
+<div class="vibe-modal" id="loginModal">
+    <div class="vibe-modal-backdrop" onclick="closeModal('loginModal')"></div>
+    <div class="vibe-modal-panel" style="max-width: 500px;">
+        <button class="vibe-modal-close" onclick="closeModal('loginModal')">✕</button>
+        <h3>Login</h3>
+        <form id="loginForm" class="contact-form">
+            <label class="vibe-field"><input id="loginEmail" type="email" required placeholder=" "><span class="vibe-field-label">Email</span></label>
+            <label class="vibe-field"><input id="loginPassword" type="password" required placeholder=" "><span class="vibe-field-label">Password</span></label>
+            <div id="loginError" style="color:red; margin-bottom:1rem; font-size:0.9rem;"></div>
+            <button type="submit" class="vibe-btn vibe-btn-primary">Login</button>
+        </form>
+        <p style="text-align:center; margin-top:1rem;">No account? <a href="#" onclick="closeModal('loginModal'); openModal('signupModal')">Sign Up</a></p>
+    </div>
+</div>
+
+<div class="vibe-modal" id="signupModal">
+    <div class="vibe-modal-backdrop" onclick="closeModal('signupModal')"></div>
+    <div class="vibe-modal-panel" style="max-width: 500px;">
+        <button class="vibe-modal-close" onclick="closeModal('signupModal')">✕</button>
+        <h3>Sign Up</h3>
+        <form id="signupForm" class="contact-form">
+            <label class="vibe-field"><input id="signupEmail" type="email" required placeholder=" "><span class="vibe-field-label">Email</span></label>
+            <label class="vibe-field"><input id="signupPassword" type="password" required placeholder=" "><span class="vibe-field-label">Password</span></label>
+            <button type="submit" class="vibe-btn vibe-btn-primary">Create Account</button>
+        </form>
+    </div>
+</div>
+
+<div class="vibe-modal" id="createPostModal">
+    <div class="vibe-modal-backdrop" onclick="closeModal('createPostModal')"></div>
+    <div class="vibe-modal-panel">
+        <button class="vibe-modal-close" onclick="closeModal('createPostModal')">✕</button>
+        <h3 id="createPostModalTitle">Create Blog Post</h3>
+        <form id="createPostForm" class="contact-form" data-vibe-form="blog-posts">
+            <!-- Hidden Input for updates vs creates -->
+            <input type="hidden" name="postId" id="postIdInput"> 
+            
+            <label class="vibe-field"><input type="text" name="title" required placeholder=" "><span class="vibe-field-label">Post Title</span></label>
+            <label class="vibe-field"><input type="url" name="imageUrl" placeholder=" "><span class="vibe-field-label">Thumbnail Image URL</span></label>
+            
+            <div style="margin-top: 0.5rem;">
+                <label style="font-size: 0.9rem; color: #6B7280; font-weight: 500; margin-bottom: 0.5rem; display: block;">Content</label>
+                <!-- Editor Toolbar -->
+                <div class="editor-toolbar" style="margin-bottom:0.5rem; display:flex; gap:0.5rem; flex-wrap:wrap; background: #f3f4f6; padding: 0.5rem; border-radius: 8px; border: 1px solid #d1d5db; align-items:center;">
+                    
+                    <!-- File Upload Input Hidden - Now accepts .odt as well -->
+                    <input type="file" id="wordDocUpload" accept=".docx, .odt" style="display:none;" onchange="handleDocumentUpload(event)">
+                    
+                    <button type="button" class="vibe-btn vibe-btn-primary" style="padding:0.2rem 0.6rem; font-size: 0.95rem; display:flex; align-items:center; gap:0.4rem;" onclick="document.getElementById('wordDocUpload').click()" title="Upload a Document (.docx, .odt) to extract text and images automatically">
+                        📄 Upload .docx / .odt
+                    </button>
+                    
+                    <span style="width: 1px; background: #cbd5e1; margin: 0 0.2rem; height: 24px;"></span>
+
+                    <button type="button" class="vibe-btn vibe-btn-outline" style="padding:0.2rem 0.6rem; font-size: 0.95rem; border-color: #cbd5e1;" onclick="document.execCommand('bold',false,null)" title="Bold"><b>B</b></button>
+                    <button type="button" class="vibe-btn vibe-btn-outline" style="padding:0.2rem 0.6rem; font-size: 0.95rem; border-color: #cbd5e1;" onclick="document.execCommand('italic',false,null)" title="Italic"><i>I</i></button>
+                    <button type="button" class="vibe-btn vibe-btn-outline" style="padding:0.2rem 0.6rem; font-size: 0.95rem; border-color: #cbd5e1;" onclick="document.execCommand('underline',false,null)" title="Underline"><u>U</u></button>
+                    <span style="width: 1px; background: #cbd5e1; margin: 0 0.2rem; height: 24px;"></span>
+                    <button type="button" class="vibe-btn vibe-btn-outline" style="padding:0.2rem 0.6rem; font-size: 0.95rem; border-color: #cbd5e1;" onclick="const url=prompt('Image URL (e.g., https://...):');if(url)document.execCommand('insertImage',false,url)" title="Insert Image">🖼 Image</button>
+                    <button type="button" class="vibe-btn vibe-btn-outline" style="padding:0.2rem 0.6rem; font-size: 0.95rem; border-color: #cbd5e1;" onclick="const url=prompt('Link URL:');if(url)document.execCommand('createLink',false,url)" title="Insert Link">🔗 Link</button>
+                </div>
+                <div id="postContentEditor" class="vibe-editor" contenteditable="true" style="min-height:350px; border:1px solid #d1d5db; padding:1rem; border-radius:8px; outline:none; background: #fff;"></div>
+            </div>
+            
+            <input type="hidden" name="content" id="postContentInput">
+            <button type="submit" class="vibe-btn vibe-btn-primary">Save Post</button>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="vibe-footer">
+    <div class="vibe-container">
+        <div class="footer-grid">
+            <div class="footer_section">
+                <h3 style="color:#fff; margin-bottom:0.5rem;">ANGELS OUTREACH</h3>
+                <p>Community Interest Company</p>
+            </div>
+            <div class="footer_section">
+                <div class="footer_title">Company</div>
+                <a href="#" onclick="showPage('about-us-page')">About Us</a>
+                <a href="#" onclick="showPage('mission-page')">Our Mission</a>
+                <a href="#" onclick="showPage('full-blog-page')">Blog</a>
+            </div>
+            <div class="footer_section">
+                <div class="footer_title">Services</div>
+                <a href="#" onclick="showPage('organ-donation-page')">Organ Donation</a>
+                <a href="#" onclick="showPage('advance-care-planning-page')">ACP</a>
+                <a href="#" onclick="showPage('estate-planning-page')">Estate Planning</a>
+            </div>
+            <div class="footer_section">
+                <div class="footer_title">Contact</div>
+                <p>collins@angelsoutreachcic.org.uk</p>
+                <p>07956169423</p>
+            </div>
+        </div>
+        <div style="text-align:center; padding: 2rem 0; border-top: 1px solid #333; margin-top:2rem;">
+            ©2025 Angels Outreach CIC.
+        </div>
+    </div>
+</footer>
+
+<div class="vibe-confirm" id="deleteConfirmModal">
+  <div class="panel">
+    <h3>Are you sure?</h3>
+    <p>This data will be permanently removed.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; margin-top:1.5rem;">
+      <button id="deleteConfirmOkBtn" class="vibe-btn vibe-btn-danger">Delete</button>
+      <button onclick="document.getElementById('deleteConfirmModal').classList.remove('is-open')" class="vibe-btn vibe-btn-outline">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Vibe Database Logic */
+(function() {
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5p0NpHuIfVUuziW4VkqwTJERjAMpgIdKz0yCO4vVkFt38FerGObaxQQxqPJ2h8RB1yA/exec';
+    const USER_ID = 'user-e4a3399d-d41c-423f-9f0d-05603a1b4e4b';
+    const PROJECT_ID = 'ac';
+    const CHUNK_SIZE = 3500; // Increased chunk size to reduce number of requests
+
+    const getFormDbId = (f) => `${PROJECT_ID}__form__${f}`;
+    const showLoader = (text = 'Processing...') => { 
+        document.getElementById('loader-text').innerText = text;
+        document.getElementById('global-loader').style.display = 'flex'; 
+    };
+    const hideLoader = () => document.getElementById('global-loader').style.display = 'none';
+
+    function jsonpRequest(action, params = {}) {
+        return new Promise((resolve, reject) => {
+            const cb = 'vibe_cb_' + Math.round(100000 * Math.random());
+            const script = document.createElement('script');
+            let url = `${APPS_SCRIPT_URL}?action=${action}&callback=${cb}`;
+            for (const k in params) url += `&${k}=${encodeURIComponent(params[k])}`;
+            script.src = url;
+            
+            // Timeout to prevent hanging indefinitely
+            const timeoutId = setTimeout(() => {
+                cleanup();
+                reject(new Error('Request timed out. The data might be too large or your connection is unstable.'));
+            }, 15000); 
+
+            const cleanup = () => {
+                delete window[cb];
+                if(script.parentNode) document.body.removeChild(script);
+            };
+
+            window[cb] = (d) => { 
+                clearTimeout(timeoutId);
+                cleanup();
+                if (d.status === 'success') resolve(d.data); else reject(new Error(d.message)); 
+            };
+
+            // Catch network errors
+            script.onerror = () => {
+                clearTimeout(timeoutId);
+                cleanup();
+                reject(new Error('Network error or request blocked.'));
+            };
+
+            document.body.appendChild(script);
+        });
+    }
+
+    async function saveProject(pId, data) {
+        const str = btoa(new TextEncoder().encode(JSON.stringify(data)).reduce((acc, byte) => acc + String.fromCharCode(byte), ''));
+        const chunks = [];
+        for (let i = 0; i < str.length; i += CHUNK_SIZE) chunks.push(str.substring(i, i + CHUNK_SIZE));
+        
+        for (let i = 0; i < chunks.length; i++) {
+            document.getElementById('loader-text').innerText = `Saving... (${i + 1}/${chunks.length} parts)`;
+            await jsonpRequest('saveProjectChunk', { userId: USER_ID, projectId: pId, chunkData: chunks[i], chunkIndex: i, totalChunks: chunks.length });
+        }
+    }
+
+    window.vibe = {
+        loadData: async function(fId, silent = false) { 
+            if(!silent) showLoader('Loading data...');
+            try {
+                const comp = await jsonpRequest('loadProject', { userId: USER_ID, projectId: getFormDbId(fId) });
+                if(!silent) hideLoader();
+                return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(comp), c => c.charCodeAt(0))));
+            } catch(e) { if(!silent) hideLoader(); return []; }
+        },
+        replaceTableData: async function(fId, arr) { 
+            showLoader('Saving data. Please wait...'); 
+            try {
+                await saveProject(getFormDbId(fId), arr); 
+            } catch(e) {
+                console.error("Save failed:", e);
+                throw e; // re-throw to trigger catch block in the submit listener
+            } finally {
+                hideLoader(); 
+            }
+        },
+        deleteData: async function(fId, ts) {
+            let data = await this.loadData(fId);
+            await this.replaceTableData(fId, data.filter(i => i.timestamp !== ts));
+        }
+    };
+
+    /* Form submission to handle both Create and Edit */
+    document.addEventListener('submit', async (e) => {
+        const form = e.target;
+        const fId = form.getAttribute('data-vibe-form');
+        if (!fId) return; 
+        e.preventDefault();
+        
+        // Force sync editor contents to hidden input before submitting
+        if(fId === 'blog-posts') {
+            document.getElementById('postContentInput').value = document.getElementById('postContentEditor').innerHTML;
+        }
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Check if we are updating an existing entry
+        const postId = data.postId;
+        delete data.postId; 
+
+        try {
+            let existing = await window.vibe.loadData(fId);
+            
+            if (postId) {
+                // UPDATE existing post
+                const idx = existing.findIndex(p => p.timestamp === postId);
+                if (idx > -1) {
+                    existing[idx].data = data;
+                }
+            } else {
+                // CREATE new record
+                existing.push({ timestamp: new Date().toISOString(), data: data });
+            }
+            
+            await window.vibe.replaceTableData(fId, existing);
+            
+            form.innerHTML = '<div style="padding:2rem; text-align:center; color:green; font-weight: bold; font-size: 1.2rem;">Done! Success.</div>';
+            setTimeout(() => location.reload(), 1500);
+        } catch(err) { 
+            alert('Submission error. ' + err.message); 
+            hideLoader(); // Ensures it gets unstuck!
+        }
+    });
+})();
+
+/* UI Logic */
+(function() {
+    const navMenu = document.getElementById('nav-list');
+    const menuBtn = document.getElementById('menu-toggle-btn');
+    const container = document.getElementById('main-nav-container');
+
+    window.openModal = (id) => document.getElementById(id).classList.add('is-open');
+    window.closeModal = (id) => document.getElementById(id).classList.remove('is-open');
+
+    window.showPage = (id) => {
+        const pages = [
+            'home-content','about-us-page','mission-page',
+            'full-blog-page','admin-page','organ-donation-page',
+            'advance-care-planning-page','estate-planning-page', 'single-blog-page'
+        ];
+        pages.forEach(p => { if(document.getElementById(p)) document.getElementById(p).style.display = 'none'; });
+        document.getElementById(id).style.display = 'block';
+        navMenu.classList.remove('is-open');
+        window.scrollTo(0,0);
+        if(id === 'admin-page') initAdminPage();
+        if(id === 'full-blog-page' || id === 'home-content') renderBlog();
+    };
+
+    menuBtn.addEventListener('click', (e) => { e.stopPropagation(); navMenu.classList.toggle('is-open'); });
+    document.addEventListener('click', (e) => { if(!container.contains(e.target)) navMenu.classList.remove('is-open'); });
+
+    async function sha256(m) {
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(m));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    document.getElementById('loginForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const users = await window.vibe.loadData('user-accounts');
+        const h = await sha256(document.getElementById('loginPassword').value);
+        const user = users.find(u => u.data.email === document.getElementById('loginEmail').value && u.data.password === h);
+        if (user) { localStorage.setItem('isLoggedIn', 'true'); location.reload(); }
+        else document.getElementById('loginError').innerText = 'Invalid credentials.';
+    };
+
+    document.getElementById('signupForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const users = await window.vibe.loadData('user-accounts');
+        const h = await sha256(document.getElementById('signupPassword').value);
+        users.push({ timestamp: new Date().toISOString(), data: { email: document.getElementById('signupEmail').value, password: h } });
+        await window.vibe.replaceTableData('user-accounts', users);
+        localStorage.setItem('isLoggedIn', 'true'); location.reload();
+    };
+
+    document.getElementById('logoutBtn')?.addEventListener('click', () => { localStorage.removeItem('isLoggedIn'); location.reload(); });
+    if(localStorage.getItem('isLoggedIn') === 'true') document.body.classList.add('logged-in');
+
+    const editor = document.getElementById('postContentEditor'), input = document.getElementById('postContentInput');
+    if(editor) editor.oninput = () => input.value = editor.innerHTML;
+
+    /* Create Post Button Setup */
+    window.openCreatePost = function() {
+        document.getElementById('createPostForm').reset();
+        document.getElementById('postIdInput').value = '';
+        document.getElementById('postContentEditor').innerHTML = '';
+        document.getElementById('postContentInput').value = '';
+        document.getElementById('createPostModalTitle').innerText = 'Create Blog Post';
+        openModal('createPostModal');
+    };
+
+    /* Edit Post Button Logic */
+    window.editPost = async function(timestamp) {
+        const posts = await window.vibe.loadData('blog-posts', true);
+        const post = posts.find(p => p.timestamp === timestamp);
+        if (!post) return;
+
+        // Populate Form Data
+        document.getElementById('postIdInput').value = post.timestamp;
+        document.querySelector('#createPostForm input[name="title"]').value = post.data.title || '';
+        document.querySelector('#createPostForm input[name="imageUrl"]').value = post.data.imageUrl || '';
+        document.getElementById('postContentEditor').innerHTML = post.data.content || '';
+        document.getElementById('postContentInput').value = post.data.content || '';
+
+        document.getElementById('createPostModalTitle').innerText = 'Edit Blog Post';
+        openModal('createPostModal');
+    };
+
+    /* Parse Document to HTML (Supports .docx and .odt) */
+    window.handleDocumentUpload = async function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const ext = file.name.split('.').pop().toLowerCase();
+        document.getElementById('loader-text').innerText = 'Extracting document and images...';
+        document.getElementById('global-loader').style.display = 'flex';
+
+        try {
+            if (ext === 'docx') {
+                const arrayBuffer = await file.arrayBuffer();
+                const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
+                document.getElementById('postContentEditor').innerHTML += result.value;
+            } else if (ext === 'odt') {
+                const html = await parseODTToHTML(file);
+                document.getElementById('postContentEditor').innerHTML += html;
+            } else {
+                alert("Please upload a valid .docx or .odt file.");
+            }
+        } catch(err) {
+            console.error(err);
+            alert("Error reading document. File might be corrupted.");
+        } finally {
+            document.getElementById('global-loader').style.display = 'none';
+            document.getElementById('wordDocUpload').value = ''; // Reset input
+        }
+    };
+
+    /* Custom pure JS ODT to HTML Parser using JSZip */
+    async function parseODTToHTML(file) {
+        if (!window.JSZip) throw new Error("JSZip is required to parse .odt files");
+        
+        const zip = await JSZip.loadAsync(file);
+        
+        // 1. Read the content XML
+        const contentXmlFile = zip.file("content.xml");
+        if (!contentXmlFile) throw new Error("Invalid ODT: Missing content.xml");
+        const contentXmlStr = await contentXmlFile.async("string");
+        
+        // Parse the XML
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(contentXmlStr, "text/xml");
+
+        // 2. Build Style Map (for Bold, Italic, Underline)
+        const styleMap = {};
+        const styles = xmlDoc.getElementsByTagName("style:style");
+        for (let i = 0; i < styles.length; i++) {
+            const style = styles[i];
+            const name = style.getAttribute("style:name");
+            const textProps = style.getElementsByTagName("style:text-properties")[0];
+            if (textProps) {
+                styleMap[name] = {
+                    bold: textProps.getAttribute("fo:font-weight") === "bold",
+                    italic: textProps.getAttribute("fo:font-style") === "italic",
+                    underline: textProps.getAttribute("style:text-underline-style") === "solid"
+                };
+            }
+        }
+
+        // 3. Build Image Map (Extract images to base64)
+        const imageMap = {};
+        for (const [filename, fileObj] of Object.entries(zip.files)) {
+            // ODT usually stores images in the Pictures/ directory
+            if ((filename.startsWith("Pictures/") || filename.startsWith("media/")) && !fileObj.dir) {
+                const base64 = await fileObj.async("base64");
+                let mime = "image/png";
+                if (filename.endsWith(".jpg") || filename.endsWith(".jpeg")) mime = "image/jpeg";
+                if (filename.endsWith(".gif")) mime = "image/gif";
+                imageMap[filename] = `data:${mime};base64,${base64}`;
+            }
+        }
+
+        // 4. Recursive function to convert XML nodes to HTML
+        function nodeToHtml(node) {
+            if (node.nodeType === 3) return node.nodeValue; // Text node
+            if (node.nodeType !== 1) return ""; // Ignore other non-element nodes
+
+            let tagName = node.tagName.replace(/:/g, "_"); // e.g., text:p -> text_p
+            
+            if (tagName === "text_p") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                return `<p>${applyStyle(inner, node.getAttribute("text:style-name"))}</p>`;
+            } 
+            else if (tagName === "text_h") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                let level = node.getAttribute("text:outline-level") || "2";
+                return `<h${level}>${inner}</h${level}>`;
+            }
+            else if (tagName === "text_span") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                return applyStyle(inner, node.getAttribute("text:style-name"));
+            }
+            else if (tagName === "text_a") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                let href = node.getAttribute("xlink:href") || "#";
+                return `<a href="${href}" target="_blank" style="color:var(--primary-color);">${inner}</a>`;
+            }
+            else if (tagName === "text_list") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                return `<ul>${inner}</ul>`;
+            }
+            else if (tagName === "text_list-item") {
+                let inner = Array.from(node.childNodes).map(nodeToHtml).join("");
+                return `<li>${inner}</li>`;
+            }
+            else if (tagName === "draw_image") {
+                let href = node.getAttribute("xlink:href");
+                if (href && imageMap[href]) {
+                    return `<img src="${imageMap[href]}" style="max-width:100%; height:auto; border-radius:8px;" />`;
+                }
+                return "";
+            }
+            else if (tagName === "text_s") { // Whitespace character
+                let count = parseInt(node.getAttribute("text:c") || "1", 10);
+                return "&nbsp;".repeat(count);
+            }
+            else if (tagName === "text_tab") { // Tab character
+                return "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            else if (tagName === "text_line-break") { // Line break
+                return "<br/>";
+            }
+            else {
+                // Fallback: traverse children
+                return Array.from(node.childNodes).map(nodeToHtml).join("");
+            }
+        }
+
+        // Apply HTML tags based on the mapped ODT styles
+        function applyStyle(text, styleName) {
+            if (!styleName || !styleMap[styleName] || !text.trim()) return text;
+            let res = text;
+            const s = styleMap[styleName];
+            if (s.bold) res = `<strong>${res}</strong>`;
+            if (s.italic) res = `<em>${res}</em>`;
+            if (s.underline) res = `<u>${res}</u>`;
+            return res;
+        }
+
+        // Start parsing from the <office:text> body
+        const body = xmlDoc.getElementsByTagName("office:text")[0];
+        if (!body) return "";
+        return nodeToHtml(body);
+    }
+
+    /* Read Single Article Logic */
+    window.readPost = async function(timestamp) {
+        const posts = await window.vibe.loadData('blog-posts', true);
+        const post = posts.find(p => p.timestamp === timestamp);
+        if (!post) return;
+
+        const container = document.getElementById('single-blog-content');
+        container.innerHTML = `
+            <h1 style="margin-bottom: 1rem; font-size: 2.5rem; line-height: 1.2;">${post.data.title}</h1>
+            <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 1.5rem;">Published on ${new Date(post.timestamp).toLocaleDateString()}</p>
+            ${post.data.imageUrl ? `<img src="${post.data.imageUrl}" alt="${post.data.title}" style="width:100%; max-height:450px; object-fit:cover; border-radius:12px; margin-bottom: 2rem;">` : ''}
+            <div style="font-size: 1.15rem; line-height: 1.8; color: #374151;">${post.data.content}</div>
+        `;
+        showPage('single-blog-page');
+    };
+
+    /* Render Blogs as Clickable Cards */
+    async function renderBlog() {
+        const g = document.getElementById('blogGrid'), fg = document.getElementById('fullBlogGrid');
+        if(!g || !fg) return;
+        const posts = await window.vibe.loadData('blog-posts', true);
+        g.innerHTML = ''; fg.innerHTML = '';
+        posts.reverse().forEach((p, idx) => {
+            // Strip HTML to make safe previews
+            const previewText = (p.data.content || '').replace(/<[^>]*>/g, '').substring(0, 120) + '...';
+            
+            const html = `
+            <article class="vibe-card" onclick="readPost('${p.timestamp}')" title="Click to read more">
+                ${p.data.imageUrl ? `<img src="${p.data.imageUrl}" class="vibe-card-media" style="height:200px; width:100%; object-fit:cover;">` : ''}
+                <div class="vibe-card-body">
+                    <h4>${p.data.title}</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">${previewText}</p>
+                    <span style="display:inline-block; margin-top: 1rem; color: var(--primary-color); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                </div>
+            </article>`;
+            
+            fg.insertAdjacentHTML('beforeend', html);
+            if(idx < 3) g.insertAdjacentHTML('beforeend', html); // Limit home page to latest 3
+        });
+    }
+
+    window.initAdminPage = async function() {
+        const sel = document.getElementById('admin-table-select'), cont = document.getElementById('admin-data-container');
+        sel.onchange = async () => {
+            const data = await window.vibe.loadData(sel.value);
+            if(!data.length) { cont.innerHTML = '<p>No data found.</p>'; return; }
+            const keys = Object.keys(data[0].data);
+            
+            let h = `<table class="admin-table"><thead><tr>${keys.map(k => `<th>${k.charAt(0).toUpperCase() + k.slice(1)}</th>`).join('')}<th style="text-align:right;">Actions</th></tr></thead><tbody>`;
+            
+            h += data.map(row => {
+                // Determine buttons needed
+                let actionBtns = `<button onclick="confirmDelete('${sel.value}', '${row.timestamp}')" class="vibe-btn vibe-btn-danger" style="padding:0.3rem 0.6rem;">Del</button>`;
+                
+                if (sel.value === 'blog-posts') {
+                    // Prepend Edit button for blog posts table
+                    actionBtns = `<button onclick="editPost('${row.timestamp}')" class="vibe-btn vibe-btn-outline" style="padding:0.3rem 0.6rem; margin-right: 0.5rem; background: #fff;">Edit</button>` + actionBtns;
+                }
+                
+                return `<tr>${keys.map(k => {
+                    let val = String(row.data[k] || '');
+                    if(k === 'content') val = val.replace(/<[^>]*>/g, ''); // Strip HTML for display in admin table
+                    return `<td>${val.substring(0, 50)}${val.length > 50 ? '...' : ''}</td>`;
+                }).join('')}<td style="text-align:right; white-space: nowrap;">${actionBtns}</td></tr>`;
+            }).join('');
+            
+            cont.innerHTML = h + `</tbody></table>`;
+        };
+    };
+
+    window.confirmDelete = (tbl, ts) => {
+        const m = document.getElementById('deleteConfirmModal');
+        m.classList.add('is-open');
+        document.getElementById('deleteConfirmOkBtn').onclick = async () => {
+            m.classList.remove('is-open');
+            await window.vibe.deleteData(tbl, ts);
+            location.reload();
+        };
+    };
+
+    renderBlog();
+})();
+</script>
+
+</body>
+</html>
