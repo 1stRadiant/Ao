@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>When Death Goes Viral - Angels Outreach CIC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://1stradiant.github.io/Ao/1766319897858.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&family=Barlow:wght@500&family=Kumbh+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Shared Minimal CSS */
+        :root { --primary-color: #800020; --primary-hover: #600018; --text-color: #4B5563; --heading-color: #111827; --bg-light: #f9fafb; --white: #fff; }
+        *, *::before, *::after { box-sizing: border-box }
+        body { font-family: 'Inter', sans-serif; color: var(--text-color); margin: 0; line-height: 1.7; background-color: var(--white); font-size: 1.1rem; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; color: var(--heading-color); font-weight: 700 }
+        a { text-decoration: none; color: var(--primary-color); transition: color 0.2s ease }
+        a:hover { color: var(--primary-hover) }
+        .vibe-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;width:100%}
+        
+        /* Navbar */
+        .vibe-nav{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.07);position:sticky;top:0;z-index:2000;padding:1rem 0}
+        .vibe-nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
+        .vibe-nav-menu{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0}
+        .vibe-nav-menu a{color:#4B5563;font-weight:500; font-size: 1.05rem;}
+        .vibe-nav-toggle{display:none;background:transparent;border:none;cursor:pointer; padding: 10px;}
+        .icon-bar{display:block;width:24px;height:2px;background-color:#111827;border-radius:2px;margin:5px 0}
+
+        /* Logo Styles */
+        .logo { display: block; position: relative; width: 315px; height: 60px; text-decoration: none }
+        .logo_image { display: block; position: absolute; width: 55px; height: 55px; top: 2.5px; background-image: url('https://1stradiant.github.io/Ao/1766319897858.png'); background-size: contain; background-repeat: no-repeat; background-position: center; }
+        .logo_text { display: block; position: absolute; left: 65px; width: 250px; height: 35px; line-height: 35px; font-family: 'Barlow', sans-serif; font-size: 26px; font-weight: 500; color: #800020 }
+        .logo_sub_text { display: block; position: absolute; left: 65px; top: 35px; width: 250px; height: 20px; line-height: 20px; font-family: 'Kumbh Sans', sans-serif; font-size: 15px; font-weight: 400; color: #800020 }
+
+        /* Dropdown */
+        .dropdown { position: relative }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; padding: 0.5rem 0; list-style: none; min-width: 240px; z-index: 2001; margin-top:0.5rem }
+        .dropdown:hover .dropdown-menu { display: block }
+        .dropdown-menu a { display: block; padding: 0.75rem 1.5rem; color: var(--text-color) }
+
+        /* Content & Buttons */
+        .service-section { padding: 4rem 0; min-height: 80vh; }
+        .vibe-btn { padding: .85rem 1.75rem; border-radius: 8px; font-weight: 600; display: inline-block; border: 1px solid transparent; text-decoration: none; font-size: 1.05rem;}
+        .vibe-btn-outline { background: transparent; border-color: #d1d5db; color: #374151 }
+        .vibe-btn-outline:hover { background: #f9fafb; border-color: var(--primary-color); color: var(--primary-color) }
+        
+        #single-blog-content img { max-width: 100%; height: auto; border-radius: 12px; margin: 1rem 0; }
+
+        /* Footer */
+        .vibe-footer { background: #111827; color: #E5E7EB; padding: 5rem 0 2rem }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 3rem }
+        .footer_title { color: #fff; margin-bottom: 1.5rem; font-weight: 700; font-size: 1.2rem }
+        .vibe-footer a { display: block; color: #9CA3AF; margin-bottom: 0.85rem; text-decoration: none; transition: color 0.2s; font-size: 1.05rem; }
+        .vibe-footer a:hover { color: #fff }
+
+        @media (max-width: 768px) {
+            .vibe-nav-toggle { display: block }
+            .vibe-nav-menu { position: fixed; left: -100%; top: 0; height: 100vh; width: 280px; background: #fff; flex-direction: column; padding: 6rem 2rem; transition: left .3s ease; z-index: 2001; box-shadow: 4px 0 10px rgba(0,0,0,0.1); }
+            .vibe-nav-menu.is-open { left: 0 }
+            .logo { width: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="vibe-nav" id="main-nav-container">
+  <div class="vibe-container vibe-nav-inner">
+    <a class="logo" href="index.html">
+        <div class="logo_image"></div>
+        <div class="logo_text">ANGELS OUTREACH</div>
+        <div class="logo_sub_text">COMMUNITY INTEREST COMPANY</div>
+    </a>
+    <button class="vibe-nav-toggle" id="menu-toggle-btn">
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+    </button>
+    <ul class="vibe-nav-menu" id="nav-list">
+      <li><a href="index.html?page=home-content">Home</a></li>
+      <li><a href="index.html?page=about-us-page">About Us</a></li>
+      <li><a href="index.html?page=mission-page">Our Mission</a></li>
+      <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown-menu">
+              <li><a href="index.html?page=organ-donation-page">Organ Donation</a></li>
+              <li><a href="index.html?page=advance-care-planning-page">Advance Care Planning</a></li>
+              <li><a href="index.html?page=estate-planning-page">Estate Planning</a></li>
+          </ul>
+      </li>
+      <li><a href="index.html?page=full-blog-page">Blog</a></li>
+      <li><a href="index.html#enquiry_wrapper">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="service-section">
+    <div class="vibe-container">
+        <a class="vibe-btn vibe-btn-outline" style="margin-bottom: 2rem;" href="index.html?page=full-blog-page">← Back to Blog</a>
+        <div id="single-blog-content" style="max-width: 850px; margin: 0 auto;">
+            <p style="text-align:center;">Loading article...</p>
+        </div>
+    </div>
+</section>
+
+<footer class="vibe-footer">
+    <div class="vibe-container">
+        <div class="footer-grid">
+            <div class="footer_section"><h3 style="color:#fff;">ANGELS OUTREACH</h3><p>Community Interest Company</p></div>
+            <div class="footer_section"><div class="footer_title">Company</div><a href="index.html?page=about-us-page">About Us</a><a href="index.html?page=full-blog-page">Blog</a></div>
+            <div class="footer_section"><div class="footer_title">Contact</div><p>collins@angelsoutreachcic.org.uk</p><p>07956169423</p></div>
+        </div>
+        <div style="text-align:center; padding: 2rem 0; border-top: 1px solid #333; margin-top:2rem;">©2025 Angels Outreach CIC.</div>
+    </div>
+</footer>
+
+<script>
+    const navMenu = document.getElementById('nav-list');
+    const menuBtn = document.getElementById('menu-toggle-btn');
+    menuBtn.addEventListener('click', (e) => { e.stopPropagation(); navMenu.classList.toggle('is-open'); });
+    document.addEventListener('click', (e) => { if(!document.getElementById('main-nav-container').contains(e.target)) navMenu.classList.remove('is-open'); });
+
+    // Vibe DB Fetch Logic
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5p0NpHuIfVUuziW4VkqwTJERjAMpgIdKz0yCO4vVkFt38FerGObaxQQxqPJ2h8RB1yA/exec';
+    const PROJECT_ID = 'ac';
+    const getFormDbId = (f) => `${PROJECT_ID}__form__${f}`;
+
+    function jsonpRequest(action, params = {}) {
+        return new Promise((resolve, reject) => {
+            const cb = 'vibe_cb_' + Math.round(100000 * Math.random());
+            const script = document.createElement('script');
+            let url = `${APPS_SCRIPT_URL}?action=${action}&callback=${cb}`;
+            for (const k in params) url += `&${k}=${encodeURIComponent(params[k])}`;
+            script.src = url;
+            const timeoutId = setTimeout(() => { delete window[cb]; if(script.parentNode) document.body.removeChild(script); reject(new Error('Timeout')); }, 15000); 
+            window[cb] = (d) => { clearTimeout(timeoutId); delete window[cb]; if(script.parentNode) document.body.removeChild(script); if (d.status === 'success') resolve(d.data); else reject(new Error()); };
+            document.body.appendChild(script);
+        });
+    }
+
+    async function loadArticle() {
+        try {
+            const comp = await jsonpRequest('loadProject', { userId: 'user-e4a3399d-d41c-423f-9f0d-05603a1b4e4b', projectId: getFormDbId('blog-posts') });
+            const posts = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(comp), c => c.charCodeAt(0))));
+            
+            // Filters specifically for the Ginimbi and Moana article
+            const post = posts.find(p => p.data.title.includes("Ginimbi and Moana"));
+            
+            if (post) {
+                document.title = post.data.title + " - Angels Outreach CIC";
+                document.getElementById('single-blog-content').innerHTML = `
+                    <h1 style="margin-bottom: 1rem; font-size: 2.5rem; line-height: 1.2; color: var(--heading-color);">${post.data.title}</h1>
+                    <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 1.5rem;">Published on ${new Date(post.timestamp).toLocaleDateString()}</p>
+                    ${post.data.imageUrl ? `<img src="${post.data.imageUrl}" style="width:100%; max-height:450px; object-fit:cover; border-radius:12px; margin-bottom: 2rem;">` : ''}
+                    <div style="font-size: 1.15rem; line-height: 1.8; color: #374151;">${post.data.content}</div>
+                `;
+            } else {
+                document.getElementById('single-blog-content').innerHTML = `<h2>Article not found in database</h2>`;
+            }
+        } catch (err) {
+            document.getElementById('single-blog-content').innerHTML = `<p>Error loading article. Please try again.</p>`;
+        }
+    }
+    
+    loadArticle();
+</script>
+</body>
+</html>
